@@ -15,8 +15,8 @@ variable_name = "programming"
 
 If you want to declare a number, do it like so:
 ```ruby
-book_count = 5
-gpa = 3.7
+book_count = 5 #Integer
+gpa = 3.7 #Float
 ```
 
 Remember, these **objects** are called variables because they can be *changed*.
@@ -63,6 +63,8 @@ If you expect a value to never change during the life of a program, that's a **c
 GRAVITATIONAL_CONST = 9.8
 GRAVITATIONAL_CONST = 28 #This will cause a warning
 ```
+
+*Note: It is convention to declare constants this way. Remember to declare it with all caps and ending with "_CONST"*
 
 #Assignment#
 ```ruby
