@@ -34,8 +34,8 @@ How do you change Strings in Ruby? Well, there are a lot of ways. If you can ima
 
 ```ruby
 title = "The Matrix"
-title.upcase #Returns an uppercase copy of String (THE MATRIX)
-title.upcase! #Modifies String "in place": title permanently changed
+title.upcase         # Returns an uppercase copy of String (THE MATRIX)
+title.upcase!        # Modifies String "in place": title permanently changed
 title.downcase!
 ```
 
@@ -63,7 +63,7 @@ If you expect a value to never change during the life of a program, that's a **c
 
 ```ruby
 GRAVITATIONAL_CONST = 9.8
-GRAVITATIONAL_CONST = 28 #This will cause a warning
+GRAVITATIONAL_CONST = 28  # This will cause a warning
 ```
 
 *Note: It is convention to declare constants this way. Remember to declare it with all caps and ending with "_CONST"*
