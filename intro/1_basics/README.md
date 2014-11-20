@@ -24,7 +24,9 @@ Remember, these **objects** are called variables because they can be *changed*.
 book_count = 5
 book_count = book_count + 2
 book_count += 2 #Same as previous statement
-book_count = 0
+book_count = 30/2
+book_count = 4*6
+book_count = 3**2
 ```
 
 How do you change strings in Ruby? Well, there are a lot of ways. If you can imagine it, there's probably a way to do it quite easily in Ruby.
@@ -63,4 +65,12 @@ GRAVITATIONAL_CONST = 28 #This will cause a warning
 ```
 
 #Assignment#
-Create a program that adds all the age
+```ruby
+# Ages of family members
+mom = 48
+dad = 51
+john = 18
+mary = 16
+```
+
+Using the above code, create a program which declares a variable, **age_sum**, that stores the sum of ages of each family member. Also create a variable which multiples the mom and dad's ages together and divides that by the difference between John and Mary's ages.
