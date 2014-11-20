@@ -13,7 +13,7 @@ You can declare and assign **variables** of different **types**. Whether it's a 
 
 For example, if you want to declare a String (i.e. a sequence of text), you can do it like this:
 ```ruby
-variable_name = "programming"
+variable_name = "programming" # Don't forget to surround with double quotes
 ```
 
 If you want to declare a number, do it like so:
