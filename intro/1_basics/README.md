@@ -46,7 +46,7 @@ title = title + ": The Return of the King"
 
 Essentially, you've combined two strings into one. Pretty convenient.
 
-Arguably, the most flexible way to manipulate strings in Ruby is through **string interpolation**. Probably the easiest way to thing about it is you specify a format that the final output should have and then plug in all the **arguments** that need to be used:
+Arguably, the most flexible way to manipulate strings in Ruby is through **string interpolation**. Probably the easiest way to think about it is you specify a format that the final output should have and then plug in all the **arguments** that need to be used:
 ```ruby
 franchise = "Final Fantasy"
 number = 7
@@ -62,5 +62,5 @@ GRAVITATIONAL_CONST = 9.8
 GRAVITATIONAL_CONST = 28 #This will cause a warning
 ```
 
-===Assignment===
+#Assignment#
 Create a program that adds all the age
