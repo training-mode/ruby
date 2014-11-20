@@ -88,3 +88,9 @@ mary = 16
 ```
 
 Using the above code, create a program which declares a variable, **age_sum**, that stores the sum of ages of each family member. Also create a variable, **result**, which multiples the mom and dad's ages together and divides that by the difference between John and Mary's ages.
+
+The program should print the following to the console:
+```ruby
+Sum of ages = 
+Result      = 
+```
