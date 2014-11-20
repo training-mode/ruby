@@ -9,7 +9,9 @@ puts "Hello, world!"
 ```
 
 ##Variables##
-There are also a few ways to declare and assign **variables**. If you want to declare a String (i.e. a sequence of text), you can do it like this:
+You can declare and assign **variables** of different **types**. Whether it's a number, text, or something more complex, there's a particular kind of **syntax** for its creation or modification.
+
+For example, if you want to declare a String (i.e. a sequence of text), you can do it like this:
 ```ruby
 variable_name = "programming"
 ```
