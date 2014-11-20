@@ -32,6 +32,8 @@ book_count = 4*6            # Multiplication
 book_count = 3**2           # Exponents
 ```
 
+See those symbols? ```+```, ```/```, etc.? They're called **operators**. You'll often be using in the same way you write down math by hand.
+
 How do you change Strings in Ruby? Well, there are a lot of ways. If you can imagine it, there's probably a way to do it quite easily in Ruby.
 
 ```ruby
