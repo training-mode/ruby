@@ -41,7 +41,7 @@ Understanding whether or not you want to modify a variable in *in place* can be 
 You'll often need to **concatenate** strings in your programming, so here's how:
 ```ruby
 title = "The Lord of the Rings"
-title = title + ": The Return of the King"
+title += ": The Return of the King"
 ```
 
 Essentially, you've combined two strings into one. Pretty convenient.
