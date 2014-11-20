@@ -91,6 +91,6 @@ Using the above code, create a program which declares a variable, **age_sum**, t
 
 The program should print the following to the console:
 ```ruby
-Sum of ages = 
-Result      = 
+Sum of ages = # ? 
+Result      = # ?
 ```
