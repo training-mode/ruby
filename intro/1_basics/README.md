@@ -95,3 +95,5 @@ The program should print the following to the console:
 Sum of ages = # ? 
 Result      = # ?
 ```
+
+*Extra Credit*: The program should also print the message shown above, but with each line reversed.
