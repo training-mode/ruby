@@ -8,7 +8,7 @@ Well, in case you don't remember, the way to do it in Ruby is:
 puts "Hello, world!"
 ```
 
-There are also a few ways to declare and assign **variables**. If you want to declare a string (i.e. a sequence of text), you can do it like this:
+There are also a few ways to declare and assign **variables**. If you want to declare a String (i.e. a sequence of text), you can do it like this:
 ```ruby
 variable_name = "programming"
 ```
@@ -29,26 +29,26 @@ book_count = 4*6
 book_count = 3**2
 ```
 
-How do you change strings in Ruby? Well, there are a lot of ways. If you can imagine it, there's probably a way to do it quite easily in Ruby.
+How do you change Strings in Ruby? Well, there are a lot of ways. If you can imagine it, there's probably a way to do it quite easily in Ruby.
 
 ```ruby
 title = "The Matrix"
 title.upcase #Temporarily modifies title to THE MATRIX
-title.upcase! #Modifies string "in place": title permanently changed
+title.upcase! #Modifies String "in place": title permanently changed
 title.downcase!
 ```
 
 Understanding whether or not you want to modify a variable in *in place* can be important depending on your program, so make sure you understand the difference.
 
-You'll often need to **concatenate** strings in your programming, so here's how:
+You'll often need to **concatenate** Strings in your programming, so here's how:
 ```ruby
 title = "The Lord of the Rings"
 title += ": The Return of the King"
 ```
 
-Essentially, you've combined two strings into one. Pretty convenient.
+Essentially, you've combined two Strings into one. Pretty convenient.
 
-Arguably, the most flexible way to manipulate strings in Ruby is through **string interpolation**. Probably the easiest way to think about it is you specify a format that the final output should have and then plug in all the **arguments** that need to be used:
+Arguably, the most flexible way to manipulate Strings in Ruby is through **String interpolation**. Probably the easiest way to think about it is you specify a format that the final output should have and then plug in all the **arguments** that need to be used:
 ```ruby
 franchise = "Final Fantasy"
 number = 7
