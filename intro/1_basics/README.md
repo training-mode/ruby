@@ -16,18 +16,18 @@ variable_name = "programming"
 
 If you want to declare a number, do it like so:
 ```ruby
-book_count = 5 #Integer
-gpa = 3.7 #Float
+book_count = 5 # Integer
+gpa = 3.7      # Float
 ```
 
 Remember, these **objects** are called variables because they can be *changed*.
 ```ruby
 book_count = 5
 book_count = book_count + 2
-book_count += 2 #Same as previous statement
-book_count = 30/2
-book_count = 4*6
-book_count = 3**2
+book_count += 2             # Same as previous statement
+book_count = 30/2           # Division
+book_count = 4*6            # Multiplication
+book_count = 3**2           # Exponents
 ```
 
 How do you change Strings in Ruby? Well, there are a lot of ways. If you can imagine it, there's probably a way to do it quite easily in Ruby.
@@ -53,7 +53,7 @@ Arguably, the most flexible way to manipulate Strings in Ruby is through **Strin
 ```ruby
 franchise = "Final Fantasy"
 number = 7
-game = "#{franchise} #{number}" #Final Fantasy 7
+game = "#{franchise} #{number}" # Final Fantasy 7
 ```
 
 See how flexible it is? You can mix and match variables of different types.
