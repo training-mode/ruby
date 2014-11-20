@@ -33,12 +33,12 @@ How do you change Strings in Ruby? Well, there are a lot of ways. If you can ima
 
 ```ruby
 title = "The Matrix"
-title.upcase #Temporarily modifies title to THE MATRIX
+title.upcase #Returns an uppercase copy of String (THE MATRIX)
 title.upcase! #Modifies String "in place": title permanently changed
 title.downcase!
 ```
 
-Understanding whether or not you want to modify a variable in *in place* can be important depending on your program, so make sure you understand the difference.
+Understanding whether or not you want to modify a variable in *in place* can be important depending on your program, so make sure you understand the difference. While we'll talk about it more later, simply put, adding a "!" to an object's **method** is short-hand for doing something *in place*.
 
 You'll often need to **concatenate** Strings in your programming, so here's how:
 ```ruby
