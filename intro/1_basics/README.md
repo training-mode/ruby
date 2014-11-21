@@ -57,7 +57,7 @@ language = "Ruby"
 language * 3      # RubyRubyRuby
 ```
 
-Is that what you expected? If so, then you're thinking like Rubyist. When Ruby was created, it was meant to be an expressive and productive language. It should be easy to do things like this, not frustrating and verbose! Ruby will allow you to get relatively a lot done without you having to write a lot of code yourself.
+Is that what you expected? If so, then you're thinking like a Rubyist. When Ruby was created, it was meant to be an expressive and productive language. It should be easy to do things like this, not frustrating and verbose! Ruby will allow you to get relatively a lot done without you having to write a lot of code yourself.
 
 Arguably, the most flexible way to manipulate Strings in Ruby is through **String interpolation**. Probably the easiest way to think about it is you specify a format that the final output should have and then plug in all the **arguments** that need to be used:
 ```ruby
