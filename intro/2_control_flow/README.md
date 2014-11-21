@@ -1,6 +1,27 @@
 #Control Flow#
 
-[placeholder]
+Oftentimes, programs need dynamic behavior, otherwise a program will always and only ever do *1* thing. Thankfully, **conditional statements** are a staple of programming languages and Ruby is no different. Here are some things you need to know.
+
+```ruby
+# 2014 population
+japan = 126000000
+usa = 319000000
+
+if japan < usa
+    puts "U-S-A!"
+else
+    puts "Nippon Ichi!
+end
+```
+
+If you need to compare values, you must use the **relational operators**:
+```
+>  # Greater than
+<  # Less than
+== # Equal to
+>= # Greater than or equal to
+<= # Less than or equal to
+```
 
 #Assignment#
 names.rb
