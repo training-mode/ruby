@@ -2,6 +2,8 @@
 
 Oftentimes, programs need dynamic behavior, otherwise a program will always and only ever do *1* thing. Thankfully, **conditional statements** are a staple of programming languages and Ruby is no different. Here are some things you need to know.
 
+A very basic example of an if-else block:
+
 ```ruby
 # 2014 population
 japan = 126000000
@@ -21,6 +23,20 @@ If you need to compare values, you must use the **relational operators**:
 == # Equal to
 >= # Greater than or equal to
 <= # Less than or equal to
+```
+
+You can have additional statements in your if-else block if you need them. Just use the **elsif** keyword:
+```ruby
+temperature = -1
+if temperature > 30
+    puts "Hot"
+elsif temperature > 15
+    puts "Warm"
+elsif temperature > 0
+    puts "Cold"
+else
+    puts "Very cold!"
+end
 ```
 
 #Assignment#
