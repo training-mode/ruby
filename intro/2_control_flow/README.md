@@ -10,11 +10,13 @@ japan = 126000000
 usa = 319000000
 
 if japan < usa
-    puts "U-S-A!"
+    puts "U-S-A!"      # This
 else
     puts "Nippon Ichi!
 end
 ```
+
+In an if-else block, the if statement evaluates a **boolean expression**. This checks whether a comparison is **true** or **false**. If a comparison is found to be true, the program proceeds the block directly beneath it. If found to be false, the block is ignored and the program checks the next comparison (an elsif or else statement).
 
 If you need to compare values, you must use the **relational operators**:
 ```
@@ -35,7 +37,16 @@ elsif temperature > 15
 elsif temperature > 0
     puts "Cold"
 else
-    puts "Very cold!"
+    puts "Very cold!"  # This
+end
+```
+
+If it wasn't already clear, you *can* use an ```if``` statement without an ```else``` statement. In some programs, this makes sense:
+
+```ruby
+person = "King"
+if person == "King"
+    puts "Welcome back, Your Majesty"
 end
 ```
 
