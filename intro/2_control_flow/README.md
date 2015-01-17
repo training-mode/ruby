@@ -9,14 +9,14 @@ A very basic example of an if-else block:
 japan = 126000000
 usa = 319000000
 
-if japan < usa
-    puts "U-S-A!"      # This
-else
-    puts "Nippon Ichi!
+if japan < usa         # Is 126000000 less than 319000000? Yes
+  puts "U-S-A!"        # This is executed
+else                   # This is ignored
+  puts "Nippon Ichi!
 end
 ```
 
-In an if-else block, the if statement evaluates a **boolean expression**. This checks whether a comparison is **true** or **false**. If a comparison is found to be true, the program proceeds the block directly beneath it. If found to be false, the block is ignored and the program checks the next comparison (an elsif or else statement).
+In an if-else block, the ***if*** statement evaluates a **boolean expression**. This checks whether a comparison is **true** or **false**. If a comparison is found to be true, the program proceeds to the block directly beneath it. If found to be false, the block is ignored and the program checks the next comparison (an ***elsif*** or ***else*** statement).
 
 If you need to compare values, you must use the **relational operators**:
 ```
@@ -30,14 +30,14 @@ If you need to compare values, you must use the **relational operators**:
 You can have additional statements in your if-else block if you need them. Just use the **elsif** keyword:
 ```ruby
 temperature = -1
-if temperature > 30
-    puts "Hot"
-elsif temperature > 15
-    puts "Warm"
-elsif temperature > 0
-    puts "Cold"
-else
-    puts "Very cold!"  # This
+if temperature > 30    # Is -1 > 30? Nope
+  puts "Hot"
+elsif temperature > 15 # Is -1 > 15? Nope
+  puts "Warm"
+elsif temperature > 0  # Is -1 > 0? Nope
+  puts "Cold"
+else                   # None of the above were true, so this must execute
+  puts "Very cold!"    # This is the result
 end
 ```
 
@@ -46,7 +46,7 @@ If it wasn't already clear, you *can* use an ```if``` statement without an ```el
 ```ruby
 person = "King"
 if person == "King"
-    puts "Welcome back, Your Majesty"
+  puts "Welcome back, Your Majesty"
 end
 ```
 
