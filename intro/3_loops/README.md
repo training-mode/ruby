@@ -42,7 +42,21 @@ end
 puts "Blast off!"
 ```
 
+**For-loops** are a common and popular alternative to **while-loops** when you must repeat a sequence of code a certain number of times. We can rewrite the above examples in the following way:
 
+```ruby
+for i in 1..1000
+    puts "Hi, mom!"
+end
+```
+
+```ruby
+for count in 10.downto(1)
+    puts "T-minus #{count}..."
+end
+
+puts "Blast off!" 
+```
 
 #Assignment#
 names.rb
