@@ -64,6 +64,19 @@ gpa = 4
 puts gpa == 4 ? "Strong" : "Try harder..."
 ```
 
+Does all that make sense? I hope so, because I'm about throw one more kind of conditional keyword at you: **unless**. While **if** statements are testing whether a condition is true, ```unless``` statements are testing whether a statement evaluates to **false**! Here's an example of where you might want to use it:
+
+```ruby
+isConvict = false
+unless isConvict:
+    puts "You can vote."
+end
+```
+
+```ruby
+name = "Scrub"
+puts "You are not the best Street Fighter" unless name == "Daigo"
+```
 
 #Assignment#
 names.rb
