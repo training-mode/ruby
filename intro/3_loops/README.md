@@ -13,7 +13,7 @@ That's manageable, isn't it? Okay, but what if I asked you to do the same thing 
 ```ruby
 count = 0
 
-while count < 1000 do
+while count < 1000
     puts "Hi, mom!"
     count += 1          # Important!
 end
@@ -24,7 +24,7 @@ Let's break it down. The block of code contained in the ```while``` section is r
 ```ruby
 count = 0
 
-while count < 1000 do   # Count will never equal 1000
+while count < 1000      # Count will never equal 1000
     puts "Hi, mom!"     # "Hi, mom!" x infinity
 end
 ```
@@ -34,7 +34,7 @@ Similar to ```unless``` and ```if```, ```until``` mirrors the behavior of ```whi
 ```ruby
 count = 10
 
-until count < 1 do
+until count < 1
     puts "T-minus #{count}..."
     count -= 1
 end
@@ -94,8 +94,8 @@ puts "Game Over"
 Anything that you put in a ```loop``` block will happen infinitely unless you use the keyword ```break```. Using ```break``` inside of a loop will cause the program to leave that block of code and return to the next highest scope. Let's get a bit more complicated and show what that means.
 
 ```ruby
-while true do
-    while true do
+while true
+    while true
         puts "Inner block"
         break
     end
