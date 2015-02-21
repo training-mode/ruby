@@ -68,7 +68,7 @@ Does all that make sense? I hope so, because I'm about throw one more kind of co
 
 ```ruby
 is_convict = false
-unless isConvict:
+unless is_convict:
     puts "You can vote."
 end
 ```
