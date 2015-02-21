@@ -136,7 +136,13 @@ As you can see, while ```break``` leaves the entire enclosing loop immediately, 
 Finally, although Ruby also offers the ```redo``` and ```retry``` keywords when working with loops, you probably won't need to know them right now. If you're curious, please look them up and think of ways to use them.
 
 #Assignment#
-names.rb
+fibonacci.rb
+
+The Fibonacci sequence is a popular programming exercise for new programmers. If you're not familiar with it, the first ten Fibonacci numbers are 1, 1, 2, 3, 5, 8, 13, 21, 34, and 55. You should be able to see a pattern in this sequence. Using conditionals and looping techniques we've covered so far, write some code that will print each of first ten Fibonacci numbers on its own line.
 
 ```ruby
+# Print out all the Fibonacci numbers from 1 to 10 in order
+
+# Your code goes here
+
 ```
