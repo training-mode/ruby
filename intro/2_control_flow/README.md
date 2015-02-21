@@ -78,6 +78,24 @@ name = "Scrub"
 puts "You are not the best Street Fighter" unless name == "Daigo"
 ```
 
+An alternative to using the **if-else** statement in Ruby is **case**. This construct works pretty much the same way except it can be easier to match multiple values at once.
+
+```ruby
+age = 24
+case age
+when 0..12
+    puts "Child"
+when 13..19
+    puts "Teenager"
+when 20..30
+    puts "Young Adult"
+else
+    puts "Adult"
+end
+```
+
+What you can take away from this is that Ruby offers you quite a bit of flexibility on how to write conditional statements. Try not to feel overwhelmed at all of the options, but instead just focus on one or two styles. Keep using them until you feel really comfortable. At that point you might want to try the others.
+
 #Assignment#
 names.rb
 
