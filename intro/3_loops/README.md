@@ -131,6 +131,10 @@ The value of i is 2
 The value of i is 3
 ```
 
+As you can see, while ```break``` leaves the entire enclosing loop immediately, ```next``` just skips to the next iteration.
+
+Finally, although Ruby also offers the ```redo``` and ```retry``` keywords when working with loops, you probably won't need to know them right now. If you're curious, please look them up and think of ways to use them.
+
 #Assignment#
 names.rb
 
