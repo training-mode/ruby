@@ -57,6 +57,13 @@ gpa = 4
 if x == 4 then puts "Strong!" else puts "Try harder..." end
 ```
 
+You may encounter this in some programs, but you can represent conditional statements using **ternary operators**. The above statement can be equivalently written the following way:
+
+```ruby
+gpa = 4
+puts x == 4 ? "Strong" : "Try harder..."
+```
+
 
 #Assignment#
 names.rb
