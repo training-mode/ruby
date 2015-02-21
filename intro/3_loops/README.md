@@ -114,6 +114,23 @@ Outer block
 
 From this, we can see that the break statement will only escape from whatever the immediate loop block of code is and return to the next highest scope.
 
+The next closest relative to ```break``` is the keyword **next**. Using ```next``` in a loop will immediately skip to the subsequent iteration of the loop, ignoring the rest of the statements in the block.
+
+```ruby
+for i in 0...4      # ... is exclusive rather than inclusive (..)
+    next if i < 2   # Ignore the rest of the loop and begin a new iteration
+
+    puts "The value of i is #{i}"
+end
+```
+
+Since the above code skips the block when i is 0 and 1, the output of this code is:
+
+```ruby
+The value of i is 2
+The value of i is 3
+```
+
 #Assignment#
 names.rb
 
