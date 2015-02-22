@@ -2,6 +2,8 @@
 
 Oftentimes, programs need dynamic behavior, otherwise a program will always and only ever do *1* thing. Thankfully, **conditional statements** are a staple of programming languages and Ruby is no different. Here are some things you need to know.
 
+##If-Else##
+
 A very basic example of an if-else block:
 
 ```ruby
@@ -57,12 +59,16 @@ gpa = 4
 if gpa == 4 then puts "Strong!" else puts "Try harder..." end
 ```
 
+##Ternary Operator##
+
 You may encounter this in some programs, but you can represent conditional statements using **ternary operators**. The above statement can be equivalently written the following way:
 
 ```ruby
 gpa = 4
 puts gpa == 4 ? "Strong" : "Try harder..."
 ```
+
+##Unless##
 
 Does all that make sense? I hope so, because I'm about throw one more kind of conditional keyword at you: **unless**. While **if** statements are testing whether a condition is true, ```unless``` statements are testing whether a statement evaluates to **false**! Here's an example of where you might want to use it:
 
@@ -77,6 +83,8 @@ end
 name = "Scrub"
 puts "You are not the best Street Fighter" unless name == "Daigo"
 ```
+
+##Case##
 
 An alternative to using the **if-else** statement in Ruby is **case**. This construct works pretty much the same way except it can be easier to match multiple values at once.
 
