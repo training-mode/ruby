@@ -138,6 +138,21 @@ answers = Hash.new(false)           # Default value is false
 puts answers["question_1"]          # false
 ```
 
+##Knowledge Check##
+1. What is the output of the following program?
+```ruby
+array1 = [0,1,2]
+
+puts array1[3]
+```
+
+2. What is the output of the following program?
+```ruby
+hash1 = {"a" => 1, "b" => 2}
+
+puts hash1["c"]
+```
+
 #Assignment#
 fibonacci.rb
 
