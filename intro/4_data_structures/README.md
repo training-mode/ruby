@@ -67,7 +67,7 @@ family.pop          # Removes last item (Brian)
 family.delete_at(3) # Removes Meg
 ```
 
-**Multidimensional arrays** are the last kind array you should know at this time. An "array-of-arrays" is the most basic container which stores other containers. You'll find this in all sorts of programs.
+**Multidimensional arrays** are the last kind of array you should know at this time. An "array-of-arrays" is the most basic container which stores other containers. You'll find this in all sorts of programs.
 
 ```ruby
 student_grades = [[100,97,99], [95,90,97], [0,0,0]]
