@@ -104,7 +104,7 @@ for i in multi_array
 end
 ```
 
-As you can see, iterating over arrays is piece of cake when using for-loops. As long as you going over each item sequentially, this kind approach makes the most sense.
+As you can see, iterating over arrays is piece of cake when using for-loops. As long as you're going over each item sequentially, this kind approach makes the most sense.
 
 #Assignment#
 fibonacci.rb
