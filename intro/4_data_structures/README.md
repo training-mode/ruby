@@ -48,6 +48,25 @@ array2 = Array.new(3)       # [nil, nil, nil]   No default value specified
 array3 = Array.new(3, 0)    # [0, 0, 0]         Default value is 0
 ```
 
+You'll often want to add new items to an array after you've already declared it. Ruby allows you to do that in the following ways:
+
+```ruby
+dicaprio_films = ["Catch Me If You Can", "The Aviator", "The Departed"]
+
+dicaprio_films.push("Blood Diamond")        # Add to the end of array
+dicaprio_films << "Revolutionary Road"      # Add to the end of array
+dicaprio_films.insert(4, "Body of Lies")    # Add at index 4
+```
+
+You can also delete elements from an array:
+
+```ruby
+family = ["Peter", "Lois", "Chris", "Meg", "Stewie", "Brian"]
+family.pop          # Removes last item (Brian)
+family.delete_at(3) # Removes Meg
+```
+
+
 #Assignment#
 fibonacci.rb
 
