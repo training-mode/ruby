@@ -10,6 +10,8 @@ puts "Hi, mom!"
 
 That's manageable, isn't it? Okay, but what if I asked you to do the same thing except 1000 times? A million times? This is where **loops** come to the rescue.
 
+##While##
+
 ```ruby
 count = 0
 
@@ -29,6 +31,8 @@ while count < 1000      # Count will never equal 1000
 end
 ```
 
+##Unless##
+
 Similar to ```unless``` and ```if```, ```until``` mirrors the behavior of ```while``` except it tests that a certain condition is false rather than true.
 
 ```ruby
@@ -41,6 +45,8 @@ end
 
 puts "Blast off!"
 ```
+
+##For##
 
 **For-loops** are a common and popular alternative to **while-loops** when you must repeat a sequence of code a certain number of times. We can rewrite the above examples in the following way:
 
@@ -74,6 +80,8 @@ The important thing to note about these for-loops is that they are storing the i
 end
 ```
 
+##Loop##
+
 The last kind I'd like to mention is invoked using the ```loop``` keyword. Go figure.
 
 ```ruby
@@ -90,6 +98,8 @@ end
 
 puts "Game Over"
 ```
+
+##Break##
 
 Anything that you put in a ```loop``` block will happen infinitely unless you use the keyword ```break```. Using ```break``` inside of a loop will cause the program to leave that block of code and return to the next highest scope. Let's get a bit more complicated and show what that means.
 
@@ -113,6 +123,8 @@ Outer block
 ```
 
 From this, we can see that the break statement will only escape from whatever the immediate loop block of code is and return to the next highest scope.
+
+##Next##
 
 The next closest relative to ```break``` is the keyword **next**. Using ```next``` in a loop will immediately skip to the subsequent iteration of the loop, ignoring the rest of the statements in the block.
 
