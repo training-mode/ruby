@@ -34,6 +34,18 @@ puts days_of_the_week.size      # 7
 
 As you can see, the index corresponding to the last item in an array is always the length of the array minus 1. This is due to the 0-indexing of array elements. If you want to know how many items are currently in an array, you can call the methods ```length```, ```count```, and ```size``` (Note: we'll delve more into methods later).
 
+Sometimes it's easier to access array elements in reverse order. You can see that in the following code:
+
+```ruby
+array1 = [0, 1, 2, 3]
+
+puts array1[0] == array1[-4]    # true
+puts array1[1] == array1[-3]    # true
+puts array1[2] == array1[-2]    # true
+puts array1[3] == array1[-1]    # true
+
+```
+
 The arrays above are both **homogenous** because all of the elements in the container are the same type. Similarly, you can create a **heterogenous** or "mixed" array just as easily.
 
 ```ruby
@@ -145,7 +157,6 @@ array1 = [0,1,2]
 
 puts array1[3]
 ```
-
 2. What is the output of the following program?
 ```ruby
 hash1 = {"a" => 1, "b" => 2}
