@@ -114,6 +114,13 @@ for i in multi_array
         puts item
     end
 end
+
+# Equivalent
+multi_array.each do |i|
+    i.each do |item|
+        puts item
+    end
+end
 ```
 
 As you can see, iterating over arrays is piece of cake when using for-loops. As long as you're going over each item sequentially, this kind approach makes the most sense.
@@ -164,9 +171,13 @@ course = {
 }
 ```
 
-To iterate over a hash, you should use the keyword ```each```:
+To iterate over a hash, you can do it two different ways: 1) using a for-loop, or 2) using ```each```:
 
 ```ruby
+for key, value in course
+    puts "#{key} => #{value}"
+end
+
 course.each do |key, value|
     puts "#{key} => #{value}"
 end
