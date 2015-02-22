@@ -16,13 +16,13 @@ First thing's first. You can store objects of all kinds in a container, whether 
 
 ```ruby
 days_of_the_week = [
-    "Sunday", 
-    "Monday", 
-    "Tuesday", 
-    "Wednesday", 
-    "Thursday", 
-    "Friday", 
-    "Saturday"
+    "Sunday",           # 0 
+    "Monday",           # 1
+    "Tuesday",          # 2
+    "Wednesday",        # 3
+    "Thursday",         # 4
+    "Friday",           # 5
+    "Saturday"          # 6
 ]
 
 puts days_of_the_week.length    # 7
@@ -30,7 +30,7 @@ puts days_of_the_week.count     # 7
 puts days_of_the_week.size      # 7
 ```
 
-If you want to know how many items are currently in an array, you call the methods ```length```, ```count```, and ```size``` (Note: we'll delve more into methods later).
+As you can see, the index corresponding to the last item in an array is always the length of the array minus 1. This is due to the 0-indexing of array elements. If you want to know how many items are currently in an array, you can call the methods ```length```, ```count```, and ```size``` (Note: we'll delve more into methods later).
 
 #Assignment#
 fibonacci.rb
