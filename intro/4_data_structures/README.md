@@ -54,7 +54,7 @@ puts question[0]    # T
 puts question[-1]   # .
 ```
 
-The arrays above are both **homogenous** because all of the elements in the container are the same type. Similarly, you can create a **heterogenous** or "mixed" array just as easily.
+The arrays above are **homogenous** because all of the elements in the container are the same type. Similarly, you can create a **heterogenous** or "mixed" array just as easily.
 
 ```ruby
 mixed_array = [123, "up-down-left-right", 99.99]
@@ -195,8 +195,18 @@ end
 1. What is the return value of an array element outside the bounds of the array?
 
 #Assignment#
-fibonacci.rb
+queen.rb
+
+I'm listening to *Bohemian Rhapsody* right now and so should you! Let's see if  you've been absorbing all of these data structures. I've provided the opening lyrics to their signature anthem. Your task is to print out each unique character in the lyrics along with the number of times it appears.
 
 ```ruby
+# A little bit of classic rock
+
+lyrics = "Is this the real life?"\
+         "Is this just fantasy?"\
+         "Caught in a landslide,"\
+         "No escape from reality."
+
+# Your code goes here
 
 ```
