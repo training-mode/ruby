@@ -31,7 +31,7 @@ while count < 1000      # Count will never equal 1000
 end
 ```
 
-##Unless##
+##Until##
 
 Similar to ```unless``` and ```if```, ```until``` mirrors the behavior of ```while``` except it tests that a certain condition is false rather than true.
 
