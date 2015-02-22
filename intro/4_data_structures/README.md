@@ -1,4 +1,4 @@
-#Data Structure#
+#Data Structures#
 
 A common need when writing programs is to organize data efficiently. This becomes increasingly apparent as your code grows bigger and more sophisticated. Rather than telling you all about it, I'll try to show you.
 
