@@ -36,7 +36,7 @@ puts(add(multiply(2,3), multiply(3,4))  # puts(add(6, 12))
 
 ```
 
-As you can see above, functions can either **return** a value or not. In ```jump```, the function merely prints some text by itself. On the other hand, ```add``` and ```multiply``` return a value whether the function is executed. In the case of ```add```, the function explicitly uses the keyword ```return```. This need not be the case, as you can see in ```multiply```. This is an example of what makes Ruby different from many other languages. **Implicit return** automatically returns whatever the evaluation of the final line in a function is.
+As you can see above, functions can either **return** a value or not. In ```jump```, the function merely prints some text by itself. On the other hand, ```add``` and ```multiply``` return a value when the function is executed. In the case of ```add```, the function explicitly uses the keyword ```return```. This need not be the case, as you can see in ```multiply```. This is an example of what makes Ruby different from many other languages. **Implicit return** automatically returns whatever the evaluation of the final line in a function is.
 
 Having seen the above examples, outside of syntax errors, can you think of any ways the above code will behave in unexpected ways? What do you think will happen here?
 
