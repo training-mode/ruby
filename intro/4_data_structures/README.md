@@ -4,6 +4,8 @@ A common need when writing programs is to organize data efficiently. This become
 
 **Containers** are a staple of clean, efficient, and well organized programming. They allow us to store many data items together in a logical way for later use. The most fundamental and basic container you'll learn is an **array**.
 
+##Arrays##
+
 ```ruby
 meals_of_the_day = ["Breakfast", "Lunch", "Dinner"]
 
