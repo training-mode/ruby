@@ -106,6 +106,38 @@ end
 
 As you can see, iterating over arrays is piece of cake when using for-loops. As long as you're going over each item sequentially, this kind approach makes the most sense.
 
+##Hashes##
+
+Another common and convenient way to organize data is to map key-value pairs in a container. That is the core idea behind a **hash** (also known as hashmap or dictionary).
+
+```ruby
+book = {
+    "title" => "The Sun Also Rises", 
+    "author" => "Ernest Hemingway", 
+    "page_count" => 251
+}
+
+puts book["name"]       # The Sun Also Rises
+puts book["author"]     # Ernest Hemingway
+puts book["page_count"] # 251
+```
+
+The syntax for accessing a value stored in a hash is given by ```hash_name["key"]```. For every key in a hash, there is a corresponding value. If a value doesn't already exist for a given key, a hash will return ```nil```.
+
+```ruby
+puts book["publish_date"]   # nil
+```
+
+Similar to arrays, hashes can be created with an alternate syntax:
+
+```ruby
+high_scores = Hash.new              # No default value specified
+high_scores["Gradius"] = 17333150
+
+answers = Hash.new(false)           # Default value is false
+puts answers["question_1"]          # false
+```
+
 #Assignment#
 fibonacci.rb
 
