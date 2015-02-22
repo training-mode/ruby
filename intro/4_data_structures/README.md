@@ -131,7 +131,7 @@ multi_array.each do |i|
 end
 ```
 
-As you can see, iterating over arrays is piece of cake when using for-loops. As long as you're going over each item sequentially, this kind approach makes the most sense.
+As you can see, iterating over arrays is a piece of cake when using for-loops. As long as you're going over each item sequentially, this kind approach makes the most sense.
 
 ##Hashes##
 
