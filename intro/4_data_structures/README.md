@@ -43,7 +43,15 @@ puts array1[0] == array1[-4]    # true
 puts array1[1] == array1[-3]    # true
 puts array1[2] == array1[-2]    # true
 puts array1[3] == array1[-1]    # true
+```
 
+One thing that may or may not surprise you is that you can interact with the individual characters in a String object the same way.
+
+```ruby
+question = "To be, or not to be..."
+
+puts question[0]    # T
+puts question[-1]   # .
 ```
 
 The arrays above are both **homogenous** because all of the elements in the container are the same type. Similarly, you can create a **heterogenous** or "mixed" array just as easily.
