@@ -41,9 +41,9 @@ mixed_array = [123, "up-down-left-right", 99.99]
 Ruby, being the flexible language that it is, allows you to create an array using this syntax too:
 
 ```ruby
-array1 = Array.new          # [] Empty array
-array2 = Array.new(3)       # [nil, nil, nil] No default value specified
-array3 = Array.new(3, 0)    # [0, 0, 0] Default value is 0
+array1 = Array.new          # []                Empty array
+array2 = Array.new(3)       # [nil, nil, nil]   No default value specified
+array3 = Array.new(3, 0)    # [0, 0, 0]         Default value is 0
 ```
 
 #Assignment#
