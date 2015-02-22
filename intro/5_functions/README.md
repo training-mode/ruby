@@ -46,7 +46,7 @@ add([], 1)          # no implicit conversion of Fixnum into Array (TypeError)
 add(1, "Hi")        # String can't be coerced into Fixnum (TypeError)
 ```
 
-This is where we run into the philosophy of the Ruby language and the concept of **Duck Typing**. In many other languages, function parameters must be explicitly specified in the function definition. If you call that function at any point in your program, you *have* to provide the correct arguments to it or your program will not even compile. You'll often hear the terms **static** and **dynamic** thrown around when discussing typing, and of the two, Ruby falls in with the latter.
+This is where we run into the philosophy of the Ruby language and the concept of **Duck Typing**. In many other languages, function parameters must be explicitly typed in the function definition. If you call that function at any point in your program, you *have* to provide the correct arguments to it or your program will not even compile. You'll often hear the terms **static** and **dynamic** thrown around when discussing typing, and of the two, Ruby falls in with the latter.
 
 This flexibility means that your code can react in multiple ways depending on the type of the objects being manipulated. As you can see above, this can be a double-edged sword if you're not careful. Since Ruby programs are not compiled, errors like this will only be discovered once a program executes (known as a **runtime exception**). As you become more experienced, writing your code with a dynamically typed mindset will become increasingly easy.
 
