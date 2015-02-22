@@ -151,18 +151,7 @@ puts answers["question_1"]          # false
 ```
 
 ##Knowledge Check##
-1. What is the output of the following program?
-```ruby
-array1 = [0,1,2]
-
-puts array1[3]
-```
-2. What is the output of the following program?
-```ruby
-hash1 = {"a" => 1, "b" => 2}
-
-puts hash1["c"]
-```
+1. What is the return value of an array element outside the bounds of the array?
 
 #Assignment#
 fibonacci.rb
