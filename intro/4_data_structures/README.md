@@ -159,7 +159,7 @@ Similar to arrays, hashes can be created with an alternate syntax:
 
 ```ruby
 high_scores = Hash.new              # No default value specified
-high_scores["Gradius"] = 17333150
+high_scores["gradius"] = 17333150
 
 answers = Hash.new(false)           # Default value is false
 puts answers["question_1"]          # false
