@@ -150,6 +150,28 @@ answers = Hash.new(false)           # Default value is false
 puts answers["question_1"]          # false
 ```
 
+You can store objects of all kinds in a hash, and like arrays, it need not be one level deep:
+
+```ruby
+course = {
+    "name" => "History 101",                # String
+    "minutes" => 60,                        # Integer
+    "students" => [                         # Array of hashes!
+        {"name" => "Mary", "age" => 20}, 
+        {"name" => "Takeshi", "age" => 21}, 
+        {"name" => "John", "age" => 20}
+    ]
+}
+```
+
+To iterate over a hash, you should use the keyword ```each```:
+
+```ruby
+course.each do |key, value|
+    puts "#{key} => #{value}"
+end
+```
+
 ##Knowledge Check##
 1. What is the return value of an array element outside the bounds of the array?
 
