@@ -67,6 +67,13 @@ end
 def validate_user1(username)
     return username == "admin" || username == "BillLumbergh"
 end
+
+# Potentially even better
+def validate_user2(username)
+    authorized_users = ["admin", "BillLumbergh"]
+
+    return authorized_users.include? username
+end
 ```
 
 Early return statements can often allow programmers to debug a flow of execution more easily. You'll definitely run into this kind of thing in the future, so it's good idea to get a handle on it. 
