@@ -62,10 +62,36 @@ def validate_user(username)
 
     return false
 end
+
+# FYI, you can rewrite the function like this
+def validate_user1(username)
+    return username == "admin" || username == "BillLumbergh"
+end
 ```
 
 Early return statements can often allow programmers to debug a flow of execution more easily. You'll definitely run into this kind of thing in the future, so it's good idea to get a handle on it. 
 
+One of the last things I'd like to cover regarding functions is **recursion**. Did you know that a function can return itself? Well, they can! Do you remember the Fibonacci assignment from the Loop module? It turns out that you can solve it pretty easily through recursion:
+
+```ruby
+def fibonacci(n)
+    return 1 if n == 1 || n == 2
+
+    return fibonacci(n - 1) + fibonacci(n - 2)
+end
+
+for i in 1..10
+    puts fibonacci(i)
+end
+```
+
+Really clean, isn't it? It may take some cognitive rewiring for you to incorporate recursion into your own programming, but it can be a very valuable skill for you to have. But on that note, do you see anything wrong with the code above? How about this...
+
+```ruby
+puts fibonacci(-1)  # stack level too deep (SystemStackError)
+```
+
+Much like loops, recursion is susceptible to the same problem. **Infinite recursion** will repeat until a program's stack runs out of memory. If you've ever heard of the term **stack overflow**, this is an example of that.
 
 ##Why?##
 
