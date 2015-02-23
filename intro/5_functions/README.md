@@ -85,7 +85,7 @@ for i in 1..10
 end
 ```
 
-Really clean, isn't it? It may take some cognitive rewiring for you to incorporate recursion into your own programming, but it can be a very valuable skill for you to have. But on that note, do you see anything wrong with the code above? How about this...
+Really clean, isn't it? You can think of recursion as the functional analogue to loops. It may take some cognitive rewiring for you to incorporate recursion into your own programming, but it can be a very valuable skill for you to have. But on that note, do you see anything wrong with the code above? How about this...
 
 ```ruby
 puts fibonacci(-1)  # stack level too deep (SystemStackError)
