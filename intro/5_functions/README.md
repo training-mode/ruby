@@ -50,6 +50,23 @@ This is where we run into the philosophy of the Ruby language and the concept of
 
 This flexibility means that your code can react in multiple ways depending on the type of the objects being manipulated. As you can see above, this can be a double-edged sword if you're not careful. Since Ruby programs are not compiled, errors like this will only be discovered once a program executes (known as a **runtime exception**). As you become more experienced, writing your code with a dynamically typed mindset will become increasingly easy.
 
+Sometimes it makes sense for a function to have more than one return statement. In fact, it's fairly common for a function to return early based on some conditional checks:
+
+```ruby
+def validate_user(username)
+    if username == "admin"
+        return true
+    elsif username == "BillLumbergh"
+        return true
+    end
+
+    return false
+end
+```
+
+Early return statements can often allow programmers to debug a flow of execution more easily. You'll definitely run into this kind of thing in the future, so it's good idea to get a handle on it. 
+
+
 ##Why?##
 
 ##Knowledge Check##
