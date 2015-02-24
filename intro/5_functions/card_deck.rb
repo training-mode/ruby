@@ -10,5 +10,5 @@ end
 card_deck = create_deck
 
 puts card_deck[0] == "2h"
-puts card_deck[1] == "3h"
+puts card_deck[8] == "10h"
 puts card_deck[51] == "As"
