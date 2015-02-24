@@ -78,7 +78,7 @@ end
 
 Early return statements can often allow programmers to debug a flow of execution more easily. You'll definitely run into this kind of thing in the future, so it's good idea to get a handle on it. 
 
-One of the last things I'd like to cover regarding functions is **recursion**. Did you know that a function can return itself? Well, they can! Do you remember the Fibonacci assignment from the Loop module? It turns out that you can solve it pretty easily through recursion:
+The last thing I'd like to cover regarding functions is **recursion**. Did you know that a function can return itself? Well, they can! Do you remember the Fibonacci assignment from the Loop module? It turns out that you can solve it pretty easily through recursion:
 
 ```ruby
 def fibonacci(n)
@@ -102,16 +102,26 @@ Much like loops, recursion is susceptible to the same problem. **Infinite recurs
 
 ##Why?##
 
+1. Reusability: functions eliminate redudant parts of your code. This allows you to use a logical piece of programming repeatedly and easily (and even in other programs).
+2. Organization: a function definition isolates a program's behavior into one place. When something goes wrong, it's easier to identify the problem.
+
 ##Knowledge Check##
-1. ?
+1. Does a function call incur any overhead? In other words, is it faster to execute a series of instructions or a function with the same instructions?
 
 #Assignment#
-?.rb
+card_deck.rb
 
+Just about every home has a deck of cards hanging around somewhere. Are they Bicycle brand? What I'd like you to do is define a function, ```create_deck```, that returns an array of Strings. Each element in the array represents a card, and the cards are sorted in the order of Hearts, Diamonds, Clubs, then Spades, with each suit sorted in ascending order (from 2 to Ace).
 
 
 ```ruby
+def create_deck
+    # Your code goes here
+end
 
-# Your code goes here
+card_deck = create_deck
 
+puts card_deck[0] == "2h"
+puts card_deck[1] == "3h"
+puts card_deck[51] == "As"
 ```
