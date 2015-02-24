@@ -121,7 +121,7 @@ end
 
 card_deck = create_deck
 
-puts card_deck[0] == "2h"
-puts card_deck[8] == "10h"
-puts card_deck[51] == "As"
+puts card_deck[0] == "2h"   # 2 of Hearts
+puts card_deck[8] == "10h"  # 10 of Hearts
+puts card_deck[51] == "As"  # Ace of Spades
 ```
