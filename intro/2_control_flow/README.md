@@ -105,7 +105,7 @@ end
 What you can take away from this is that Ruby offers you quite a bit of flexibility on how to write conditional statements. Try not to feel overwhelmed at all of the options, but instead just focus on one or two styles. Keep using them until you feel really comfortable. At that point you might want to try the others.
 
 #Knowledge Check#
-1. What is the result of ```c < C```? What about ```1 > A```?
+1. What is the result of ```"c" < "C"```? What about ```"1" > "A"```?
 
 #Assignment#
 names.rb
