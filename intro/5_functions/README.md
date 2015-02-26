@@ -105,7 +105,7 @@ Much like loops, recursion is susceptible to the same problem. **Infinite recurs
 1. Reusability: functions eliminate redudant parts of your code. This allows you to use a logical piece of programming repeatedly and easily (and even in other programs).
 2. Organization: a function definition isolates a program's behavior into one place. When something goes wrong, it's easier to identify the problem.
 
-##Knowledge Check##
+#Knowledge Check#
 1. Does a function call incur any overhead? In other words, is it faster to execute a series of instructions or a function with the same instructions?
 
 #Assignment#
