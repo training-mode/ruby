@@ -30,10 +30,15 @@ def multiply(x, y)
     x * y               # Implicit return: returns the product of x and y
 end
 
+def roll_dice(sides=6)              # Default parameter
+    return Random.rand(sides) + 1
+end
+
 jump                                    # You jumped!
 puts(add(multiply(2,3), multiply(3,4))  # puts(add(6, 12))
                                         # puts(18)
-
+roll_dice                               # Random.rand(6) + 1
+roll_dice(12)                           # Random.rand(12) + 1
 ```
 
 As you can see above, functions can either **return** a value or not. In ```jump```, the function merely prints some text by itself. On the other hand, ```add``` and ```multiply``` return a value when the function is executed. In the case of ```add```, the function explicitly uses the keyword ```return```. This need not be the case, as you can see in ```multiply```. This is an example of what makes Ruby different from many other languages. **Implicit return** automatically returns whatever the evaluation of the final line in a function is.
