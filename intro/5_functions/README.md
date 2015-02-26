@@ -112,6 +112,7 @@ Much like loops, recursion is susceptible to the same problem. **Infinite recurs
 
 #Knowledge Check#
 1. Does a function call incur any overhead? In other words, is it faster to execute a series of instructions or a function with the same instructions?
+2. What is a default parameter?
 
 #Assignment#
 card_deck.rb
