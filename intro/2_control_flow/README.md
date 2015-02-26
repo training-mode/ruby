@@ -11,10 +11,10 @@ A very basic example of an if-else block:
 japan = 126000000
 usa = 319000000
 
-if japan < usa         # Is 126000000 less than 319000000? Yes
-    puts "U-S-A!"      # This is executed
-else                   # This is ignored
-    puts "Nippon Ichi!
+if japan < usa          # Is 126000000 less than 319000000? Yes
+    puts "U-S-A!"       # This is executed
+else                    # This is ignored
+    puts "Nippon Ichi!"
 end
 ```
 
