@@ -14,6 +14,19 @@ As you can see, the ```each``` method expects a block as an argument. This can b
 
 You might be wondering, "How is this helpful?" Well, in the previous examples, passing a block to a function essentially lets you customize the behavior of that function. Specifically, even though we're calling ```each``` on arrays of integers in every case, the block ultimately determines what happens to the elements. This **abstraction** shifts the focus onto the function's caller and ultimately makes the function more flexible.
 
+Arrays actually have a lot of different methods which accept blocks as arguments. Here are a few:
+
+```ruby
+array1 = [1, 11, 111, 1111]
+array1.map! { |i| i -= 1  }     # array1 == [0, 10, 110, 1110]
+
+songs = ["My Favorite Things", "Climb Ev'ry Mountain", "Do-Re-Mi"]
+songs.sort! { |first, second| second <=> first }   # Sort descending order
+
+primes = [2, 3, 5, 7, 11, 13, 17, 19]
+primes.select { |i| i > 10 }            # [11, 13, 17, 19]
+```
+
 #Assignment#
 ?.rb
 
