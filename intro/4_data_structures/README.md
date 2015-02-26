@@ -191,7 +191,7 @@ course.each do |key, value|
 end
 ```
 
-##Knowledge Check##
+#Knowledge Check#
 1. What is the return value of an array element outside the bounds of the array?
 
 #Assignment#
