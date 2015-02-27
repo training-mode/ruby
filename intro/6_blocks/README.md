@@ -26,6 +26,8 @@ songs.sort! { |first, second| second <=> first }   # Sort descending order
 primes = [2, 3, 5, 7, 11, 13, 17, 19]
 primes.select { |i| i > 10 }            # [11, 13, 17, 19]
 ```
+#Knowledge Check#
+1. What's the difference between calling ```songs.sort``` and ```songs.sort!```?
 
 #Assignment#
 ?.rb
