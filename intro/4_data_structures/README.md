@@ -133,6 +133,15 @@ end
 
 As you can see, iterating over arrays is a piece of cake when using for-loops. As long as you're going over each item sequentially, this kind approach makes the most sense.
 
+It's a common need to only take subsets of an an array. For example, if you only want the third, fourth, and fifth items from an array, you can do that like this:
+
+```ruby
+classes = ["Geometry", "Biology", "World History", "P.E.", "Jazz Band"]
+classes[2..4]       # ["World History", "P.E", "Jazz Band"]
+```
+
+Whether you're building a list of "Top 3 Favorites" or "5 Most Hated," subscripting an array in this was is very helpful.
+
 ##Hashes##
 
 Another common and convenient way to organize data is to map key-value pairs in a container. That is the core idea behind a **hash** (also known as hashmap or dictionary).
