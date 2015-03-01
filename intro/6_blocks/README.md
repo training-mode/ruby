@@ -49,6 +49,22 @@ more_ratings = {
 imdb_ratings.merge!(more_ratings)
 ```
 
+Are you wondering how you can write your own functions to work with blocks? The secret lies in the keyword ```yield```:
+
+```ruby
+def block_required
+    yield
+end
+
+def block_optional
+    yield if block_given?
+    puts "Finished."
+end
+
+block_required { puts "Yielding block" }    # Yielding block
+block_optional                              # Finished.
+```
+
 #Knowledge Check#
 1. What's the difference between calling ```songs.sort``` and ```songs.sort!```?
 
