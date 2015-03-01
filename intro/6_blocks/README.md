@@ -53,11 +53,11 @@ Are you wondering how you can write your own functions to work with blocks? The 
 
 ```ruby
 def block_required
-    yield
+    yield                   # Simplest way to execute a block
 end
 
 def block_optional
-    yield if block_given?
+    yield if block_given?   # Only executes block if it's provided
     puts "Finished."
 end
 
