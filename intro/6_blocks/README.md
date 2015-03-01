@@ -26,6 +26,29 @@ songs.sort! { |first, second| second <=> first }   # Sort descending order
 primes = [2, 3, 5, 7, 11, 13, 17, 19]
 primes.select { |i| i > 10 }            # [11, 13, 17, 19]
 ```
+
+Likewise, hashes also have methods which accept blocks as arguments.
+
+```ruby
+imdb_ratings = {
+    "The Shawshank Redemption" => 9.2, 
+    "The Godfather" => 9.2, 
+    "The Godfather: Part II" => 9.0, 
+    "The Dark Knight" => 8.9, 
+    "Pulp Fiction" => 8.9
+}
+
+imdb_ratings.select { |k, v| v > 9 }
+imdb_ratings.reject { |k, v| v > 9 }
+
+more_ratings = {
+    "12 Angry Men" => 8.9, 
+    "Schindler's List" => 8.9
+}
+
+imdb_ratings.merge!(more_ratings)
+```
+
 #Knowledge Check#
 1. What's the difference between calling ```songs.sort``` and ```songs.sort!```?
 
