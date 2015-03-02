@@ -61,9 +61,27 @@ def block_optional
     puts "Finished."
 end
 
+def random_attack
+    attacks = {
+        0 => "Jab", 
+        1 => "Strong", 
+        2 => "Fierce", 
+        3 => "Short", 
+        4 => "Forward", 
+        5 => "Roundhouse"
+    }
+
+    yield attacks[rand(attacks.length)] if block_given?
+end
+
 block_required { puts "Yielding block" }    # Yielding block
 block_optional                              # Finished.
+
+random_attack { |attack| puts attack }
+random_attack                               # Does nothing
 ```
+
+The first, ```block_required```, shows the absolute minimum needed to execute a function which accepts a block as an argument. By itself, ```yield``` will merely execute the contents of the block passed to it. On the other hand, ```block_optional``` shows that within a function's body, you can check whether or not a block was provided. This allows you to add instructions that will execute no matter if a block is passed or not. Lastly, ```random_attack``` is an example of a function that yields a value back to the block. Keep in mind that it is possible to yield more than one value from a function. As you become more experienced, you might encounter times where this is appropriate.
 
 #Knowledge Check#
 1. What's the difference between calling ```songs.sort``` and ```songs.sort!```?
