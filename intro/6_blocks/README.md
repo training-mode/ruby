@@ -87,10 +87,26 @@ The first, ```block_required```, shows the absolute minimum needed to execute a 
 1. What's the difference between calling ```songs.sort``` and ```songs.sort!```?
 
 #Assignment#
-?.rb
+game_rankings.rb
 
-?
+The Nintendo 64 was a very popular game console when I was growing up. People often like to argue about games based on their scores from magazines and other critical publications. Your task in this assignment is to find the average score of the top 10 games in ```game_rankings```. Once you have this value, *using blocks*, print out only the games in the list who have a score greater than the calculated average.
 
 ```ruby
+# Top 10 Nintendo 64 games from Gamerankings
+
+game_rankings = {
+    "The Legend of Zelda: Ocarina of Time" => 0.9754, 
+    "Super Mario 64" => 0.9641, 
+    "GoldenEye 007" => 0.9470, 
+    "Perfect Dark" => 0.9455, 
+    "The Legend of Zelda: Majora's Mask" => 0.9195, 
+    "1080: TenEighty Snowboarding" => 0.8960, 
+    "Conker's Bad Fur Day" => 0.8928, 
+    "Excitebike 64" => 0.8907, 
+    "Turok 2: Seeds of Evil" => 0.8896, 
+    "Paper Mario" => 0.8881
+}
+
 # Your code goes here
+
 ```
