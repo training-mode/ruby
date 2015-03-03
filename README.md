@@ -1,4 +1,17 @@
-ruby
-====
+#ruby#
 
-Ruby training for friends
+##Purpose##
+
+The purpose of this project is to provide information and educational exercises for anyone that wants to explore the Ruby language. Rather than overwhelm you with text, my goal is to provide lots of code snippets and a minimum working knowledge for a given skill level. If you need to dive deeper into the details of Ruby, there are plenty of books and other resources freely available online.
+
+##How to Use This##
+
+If you're already an experienced programmer in at least one language, I recommend that you just scan over the materials in the repository and tinker around in your own development environment. On the other hand, if this is your first rodeo and you want my help, I recommend doing the following:
+
+1. **Fork** the repository.
+2. **Clone** your forked repository to your computer.
+3. Modify the assignment files included in each module and **commit** the changees when finished.
+4. **Push** the changes to your forked repo.
+5. Issue a **pull request** so that I can quickly see your solution.
+
+If you can figure out how to do all those things, you'll have a better grasp on how to use Github and how to work on a group project.
