@@ -91,6 +91,8 @@ castlevania_games = [
 
 It is common practice to use Symbols as keys in a hash due to their inherent immutability and memory saving properties. If you anticipate that a particular String will be reused many times over the course of a program's life, a Symbol can be quite helpful.
 
+One final tip: if you ever need to know what all of the Symbols in your Ruby program are, you can check the array, ```Symbol.all_symbols```. You'll find a lot of Symbols that are reused by the many parts of Ruby, but any Symbols you have also declared will be in there!
+
 #Assignment#
 ?.rb
 
