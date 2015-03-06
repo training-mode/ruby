@@ -91,6 +91,37 @@ castlevania_games = [
 
 It is common practice to use Symbols as keys in a hash due to their inherent immutability and memory saving properties. If you anticipate that a particular String will be reused many times over the course of a program's life, a Symbol can be quite helpful.
 
+##Other##
+
+As a quick reference, here are the ways you can create Symbols:
+
+```ruby
+state1 = :california
+state2 = :"Rhode Island"
+state3 = "Montana".to_sym
+state4 = "Texas".intern
+```
+
+The methods ```to_sym``` and ```intern``` are helpful if you need to convert a collection of Strings into Symbols for some reason:
+
+```ruby
+taxonomic_ranks = [
+    "Life", 
+    "Domain", 
+    "Kingdom", 
+    "Phylum", 
+    "Class", 
+    "Order", 
+    "Family", 
+    "Genus", 
+    "Species"
+]
+
+my_symbols = []
+
+taxonomic_ranks.each { |rank| my_symbols << rank.intern }
+```
+
 One final tip: if you ever need to know what all of the Symbols in your Ruby program are, you can check the array, ```Symbol.all_symbols```. You'll find a lot of Symbols that are reused by the many parts of Ruby, but any Symbols you have also declared will be in there!
 
 #Assignment#
