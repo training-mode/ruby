@@ -16,7 +16,7 @@ As you can see, Blocks can't be executed by themselves, nor can they can be assi
 
 ##Procs##
 
-Conceptually, Procs are reusable Blocks. They *can* be declared and used later. Functions that accept Blocks will also work with Procs:
+Conceptually, Procs are reusable Blocks. They *can* be declared and used later. Functions that accept Blocks will also work with Procs: all you need to do is prefix the Proc variable with an ampersand when it's passed as an argument.
 
 ```ruby
 squared = Proc.new { |x| x**2 }
