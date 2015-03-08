@@ -125,9 +125,19 @@ taxonomic_ranks.each { |rank| my_symbols << rank.intern }
 One final tip: if you ever need to know what all of the Symbols in your Ruby program are, you can check the array, ```Symbol.all_symbols```. You'll find a lot of Symbols that are reused by the many parts of Ruby, but any Symbols you have also declared will be in there!
 
 #Assignment#
-?.rb
+sites.rb
+
+Without a doubt, we all spend a lot of time on the web. Your task in this module is to make a request to three different homepages: Reddit, Facebook, and Spotify. By including the ```open-uri``` module, you can easily get the data from a website through the ```open``` function. This function accepts a block and yields a File object representing the contents of the webpage. Create a hash, ```url_map```, and store the size of each page in it. The keys in this hash *must* be Symbols.
 
 ```ruby
+require "open-uri"
+
+urls = [
+    "https://www.reddit.com", 
+    "https://www.facebook.com", 
+    "https://www.spotify.com"
+]
+
 # Your code goes here
 
 ```
