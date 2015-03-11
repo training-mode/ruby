@@ -55,6 +55,27 @@ finished = Proc.new { puts "Finished" }
 multiple_parameters(cubed, finished)
 ```
 
+##All Three##
+
+It's possible to write a function which accepts a block, a proc, *and* a lambda. The secret is to prefix a function parameter with ```&```:
+
+```ruby
+def chant(&block)
+    yield "Go!" if block_given?
+end
+
+# Block
+chant { |word| puts "Block:\t#{x}" }
+
+# Proc
+double = Proc.new { |word| puts "Proc:\t#{x * 2}" }
+chant(&double)
+
+# Lambda
+triple = lambda { |x| puts "Lambda:\t#{x * 3}" }
+chant(&triple)
+```
+
 #Assignment#
 ?.rb
 
