@@ -55,6 +55,26 @@ finished = Proc.new { puts "Finished" }
 multiple_parameters(cubed, finished)
 ```
 
+##Lambdas##
+
+A Lambda object is very similar to a Proc. In fact, if you inspect the ```class``` attribute, it will tell you it's a Proc type! Although that may be true, Lambdas and Procs are actually different in two important ways:
+
+```ruby
+random_proc = Proc.new { |x| puts rand(x) }
+random_lambda = lambda { |x| puts rand(x) }
+
+random_proc.call(5)         # Okay
+random_lambda.call(5)       # Okay
+
+random_proc.call            # Okay
+random_lambda.call          # ArgumentError
+
+random_proc.call(5, 6)      # Okay
+random_lambda.call(5, 6)    # ArgumentError
+```
+
+As you can see above, even though the Proc and the Lambda have the same contents, they handle the number of arguments differently. They both work as expected when one argument is passed to ```call```.  However, when an incorrect number of arguments is passed to a Lambda, ```call``` will throw an ArgumentError. Compare that to what happens with a Proc. The Proc will *not* check the number of arguments passed to it. Specifically, if a proc requires an argument but doesn't receive one, it will return ```nil```. If too many arguments are provided, it will ignore the unnecessary ones. 
+
 ##All Three##
 
 It's possible to write a function which accepts a block, a proc, *and* a lambda. The secret is to prefix a function parameter with ```&```:
