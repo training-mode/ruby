@@ -73,7 +73,26 @@ random_proc.call(5, 6)      # Okay
 random_lambda.call(5, 6)    # ArgumentError
 ```
 
-As you can see above, even though the Proc and the Lambda have the same contents, they handle the number of arguments differently. They both work as expected when one argument is passed to ```call```.  However, when an incorrect number of arguments is passed to a Lambda, ```call``` will throw an ArgumentError. Compare that to what happens with a Proc. The Proc will *not* check the number of arguments passed to it. Specifically, if a proc requires an argument but doesn't receive one, it will return ```nil```. If too many arguments are provided, it will ignore the unnecessary ones. 
+As you can see above, even though the Proc and the Lambda have the same contents, they handle the number of arguments differently. They both work as expected when one argument is passed to ```call```.  However, when an incorrect number of arguments is passed to a Lambda, ```call``` will throw an ArgumentError. Compare that to what happens with a Proc. The Proc will *not* check the number of arguments passed to it. Specifically, if a Proc requires an argument but doesn't receive one, it will return ```nil```. If too many arguments are provided, it will ignore the unnecessary ones. 
+
+```ruby
+def early_proc
+    early = Proc.new { return "Called Proc!" }
+    puts early.call                                  # Exits function
+    puts "End of early_proc"
+end
+
+def full_lambda
+    full = lambda { return "Called Lambda!" }
+    puts full.call
+    puts "End of full_lambda"
+end
+
+early_return    # Nothing printed
+full_lambda     # "Called Lambda!" and "End of full_lambda" are both printed
+```
+
+The above example illustrates how Procs and Lambdas differ when ```return``` is included in their bodies. In the case of the former, the execution will leave the function early when ```call``` is invoked. By contrast, the Lambda will continue with the remaining instructions in the function. 
 
 ##All Three##
 
