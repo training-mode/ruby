@@ -4,7 +4,7 @@ towers = [
     { :name => "Canton Tower", :height => 600.0 }, 
     { :name => "Eiffel Tower", :height => 324.0 }, 
     { :name => "Tokyo Tower", :height => 332.6 },  
-    { :name => "Stratosphere Tower", :height => 350.2 }, 
+    { :name => "Stratosphere Tower", :height => 350.2 } 
 ]
 
 factor = 100/2.54   # Converts centimeters to inches

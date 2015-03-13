@@ -118,7 +118,23 @@ chant(&triple)
 #Assignment#
 towers.rb
 
-```ruby
-# Your code goes here
+I see quite a few famous buildings from my window and they reminded me of other famous landmarks around the world. Using the provided array, create a new one, ```sorted_array```, which rearranges the items in the original in *descending* order according to their heights. Afterwards, iterate over the newly created array using the lambda, ```conversion```, which will print out both the name of the tower as well as its height in inches, rounded to 1 decimal point.
 
+```ruby
+# Height in meters
+towers = [
+    { :name => "Berliner Fernsehturm", :height => 368.0 },
+    { :name => "Canton Tower", :height => 600.0 },
+    { :name => "Eiffel Tower", :height => 324.0 },
+    { :name => "Tokyo Tower", :height => 332.6 },
+    { :name => "Stratosphere Tower", :height => 350.2 }
+]
+
+factor = 100/2.54   # Converts centimeters to inches
+
+conversion = lambda do |x|
+    # Your code goes here
+end
+
+# Your code goes here
 ```
