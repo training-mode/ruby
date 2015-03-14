@@ -4,8 +4,6 @@ Phew, we've finally made it. Most introductory programming curricula culminate w
 
 *Note: I highly recommend you look up the history of OOP in other sources. You might find it interesting.*
 
-#How#
-
 Do you remember how we coded a book as hash? It's in module 4 in case you don't remember:
 
 ```ruby
