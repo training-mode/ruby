@@ -52,8 +52,6 @@ What does ```initialize``` do? In this case, it is a special method which must b
 
 ```ruby
 book1 = Book.new("The Sun Also Rises", "Ernest Hemingway", 251)
-puts book1.title    # The Sun Also Rises
-
 book1.describe  # The Sun Also Rises by Ernest Hemingway (251 pages)
 
 book2 = Book.new    # ArgumentError
@@ -99,13 +97,45 @@ puts CoinFlip.number_of_flips           # 10
 flips.each { |flip| puts flip.result }
 ```
 
-What I've shown above is a popular pattern in programming to keep track of how many of a given Object is created. The ```initialize``` method increments class variable serving as a counter. Since the scope of variable is limited, a new method, ```self.number_of_flips```, is included so that other parts of your code can get this information. We will explore the topic of scope in the next module.
+What I've shown above is a popular pattern in programming to keep track of how many of a given Object have been created. The ```initialize``` method increments the class variable serving as a counter. Since the scope of variable is limited, a new method, ```self.number_of_flips```, is included so that other parts of your code can get this information. We will explore the topic of scope in the next module.
 
 Make sure you understand the difference between a class and an instance. In case you're confused, the former is like a blueprint for the Object while the other is a concrete representation of the Object.
 
 #Assignment#
-?.rb
+phones.rb
+
+In real world applications, classes are used to model both abstract and concrete things. For example, the characteristics of a smartphone can be represented in a basic class. Using what you've learned, complete the Phone class below so that it has the attributes 1) brand, 2) model, 3) operating_system, and 4) release_date. I've already included an array of hashes which you will convert to Phone instances. These newly formed instances should be added to ```new_phones```.
 
 ```ruby
+require "date"
+
+class Phone
+    # Your code goes here
+end
+
+phones = [
+    {
+        :brand              => "Apple",
+        :model              => "iPhone 1st gen",
+        :operating_system   => "iPhone OS 1.0",
+        :release_date       => Date.new(2007, 6, 29)
+    },
+    {
+        :brand              => "Google",
+        :model              => "Nexus One",
+        :operating_system   => "Android 2.1 Eclair",
+        :release_date       => Date.new(2010, 1, 5)
+    },
+    {
+        :brand              => "Samsung",
+        :model              => "Galaxy S",
+        :operating_system   => "Android 2.3.6 Gingerbread",
+        :release_date       => Date.new(2010, 6, 4)
+    }
+]
+
+new_phones = []
+
 # Your code goes here
+
 ```
