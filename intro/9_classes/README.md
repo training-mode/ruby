@@ -68,6 +68,39 @@ book3 = Book.new(0,111,"Not a number")
 book3.describe  # 0 by 111 (Not a number pages)
 ```
 
+The last thing I'd like to introduce in this module are **class variables**. While attributes are associated with an individual instance of a class and are likely to be different, class variables are owned by the class itself.
+
+```ruby
+class CoinFlip
+    @@flip_count = 0                    # Class variable
+
+    def initialize
+        @side = rand(2)
+        @@flip_count += 1
+    end
+
+    def result                          # Translate attribute to English
+        return "Heads" if @side == 0
+        "Tails"
+    end
+
+    def self.number_of_flips            # Makes class variable accessible
+        @@flip_count
+    end
+end
+
+flips = []
+for i in 1..10
+    flips << CoinFlip.new
+end
+
+puts CoinFlip.number_of_flips           # 10
+
+flips.each { |flip| puts flip.result }
+```
+
+What I've shown above is a popular pattern in programming to keep track of how many of a given Object is created. The ```initialize``` method increments class variable serving as a counter. Since the scope of variable is limited, a new method, ```self.number_of_flips```, is included so that other parts of your code can get this information. We will explore the topic of scope in the next module.
+
 Make sure you understand the difference between a class and an instance. In case you're confused, the former is like a blueprint for the Object while the other is a concrete representation of the Object.
 
 #Assignment#
