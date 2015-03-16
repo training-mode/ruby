@@ -1,6 +1,6 @@
 #Scope#
 
-Although we haven't discussed visibility at length in earlier modules, we've already been dealing with it in form or another.
+Although we haven't discussed visibility at length in earlier modules, we've already been dealing with it in one form or another.
 
 ##Local##
 
@@ -50,13 +50,13 @@ As their name implies, **global** scoped variables are visibile *anywhere* in yo
 While you might be tempted to include them often in your code, please resist! It is considered best practices to use global variables *sparingly*. "For what reasons?" you ask. That in itself can be a much longer discussion, but the gist of it is that since global variables are accessible anywhere in a program, it becomes a lot more difficult to debug a complex application. If you're really interested in making them a part of your skillset, you might want to consider using them mostly for constants rather than variables that might be changed in the future.
 
 ```ruby
-class ErrorMessages
+class ErrorMessage
     $ERROR1_CONST = "You did something bad!"
     $ERROR2_CONST = "You did something REALLY bad!"
     $ERROR3_CONST = "Oh no..!"
 end
 
-puts "#{$ERROR1_CONST} {$ERROR2_CONST} {$ERROR3_CONST}" # Accessible anywhere!
+puts "#{$ERROR1_CONST} #{$ERROR2_CONST} #{$ERROR3_CONST}" # Accessible anywhere!
 ```
 
 ```ruby
