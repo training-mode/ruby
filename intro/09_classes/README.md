@@ -95,7 +95,7 @@ puts CoinFlip.number_of_flips           # 10
 flips.each { |flip| puts flip.result }
 ```
 
-What I've shown above is a popular pattern in programming to keep track of how many of a given Object have been created. The ```initialize``` method increments the class variable serving as a counter. Since the scope of variable is limited, a new method, ```self.number_of_flips```, is included so that other parts of your code can get this information. We will explore the topic of scope in the next module.
+What I've shown above is a popular pattern in programming to keep track of how many of a given Object have been created. The ```initialize``` method increments the class variable serving as a counter. Since the scope of a variable is limited by default, a new method, ```self.number_of_flips```, is included so that other parts of your code can get this information. We will explore the topic of scope in the next module.
 
 Make sure you understand the difference between a class and an instance. In case you're confused, the former is like a blueprint for the Object while the other is a concrete representation of the Object.
 
