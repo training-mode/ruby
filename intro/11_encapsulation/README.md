@@ -54,6 +54,31 @@ So when is it acceptable for the internal attributes of an instance to be access
 
 You've probably come across this in other kinds of applications. If you've ever worked on a shared document, you can control who has view privileges (i.e. read-only) and who can edit it (i.e. read+write). The same basic idea underlies classes and the design of **interfaces**.
 
+```ruby
+class Notebook
+    attr_reader :length
+    attr_writer :width
+    attr_accessor :title
+
+    def initialize(length, width, title)
+        @length = length
+        @width = width
+        @title = title
+    end
+end
+
+notebook = Notebook.new(11.0, 9.8, "Chinese 101")
+notebook.length             # Okay (read access)
+
+notebook.width              # NoMethodError
+notebook.width = 10         # Okay (write access)
+
+notebook.title              # Okay (read access)
+notebook.title = "Calculus" # Okay (write access)
+```
+
+When you put the methods ```attr_reader```, ```attr_writer```, or ```attr_accessor``` in front of a symbol that corresponds to a class field, the visibility on that data member will be modified. The first, ```attr_reader```, makes an attribute readable but *not* writable. The second does the exact opposite: an attribute can be modified but not read. Finally, ```attr_accessor``` is the most permissive, allowing a field to be freely read and changed.
+
 #Assignment#
 ?.rb
 
