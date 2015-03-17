@@ -79,6 +79,29 @@ notebook.title = "Calculus" # Okay (write access)
 
 When you put the methods ```attr_reader```, ```attr_writer```, or ```attr_accessor``` in front of a symbol that corresponds to a class field, the visibility on that data member will be modified. The first, ```attr_reader```, makes an attribute readable but *not* writable. The second does the exact opposite: an attribute can be modified but not read. Finally, ```attr_accessor``` is the most permissive, allowing a field to be freely read and changed.
 
+For your own reference, Ruby automagically translates the ```attr_****``` business into the following equilavent pieces of code:
+
+```ruby
+# attr_reader :length
+def length
+    @length
+end
+
+# attr_writer :width
+def width=(value)
+    @width = value
+end
+
+# attr_accessor :title
+def title
+    @title
+end
+
+def title=(value)
+    @title = value
+end
+```
+
 #Assignment#
 ?.rb
 
