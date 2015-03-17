@@ -51,33 +51,39 @@ While you might be tempted to include them often in your code, please resist! It
 
 ```ruby
 class ErrorMessage
-    $ERROR1_CONST = "You did something bad!"
-    $ERROR2_CONST = "You did something REALLY bad!"
-    $ERROR3_CONST = "Oh no..!"
+    $ERROR1 = "You did something bad!"
+    $ERROR2 = "You did something REALLY bad!"
+    $ERROR3 = "Oh no..!"
 end
 
-puts "#{$ERROR1_CONST} #{$ERROR2_CONST} #{$ERROR3_CONST}" # Accessible anywhere!
-```
-
-```ruby
-class Television
-    def initialize(width, resolution, hertz)
-        @width = width
-        @resolution = resolution
-        @hertz = hertz
-    end
-end
-```
-
-```ruby
-tv1 = Television.new(32, 1080, 60)
-tv1.width       # NoMethodError
+puts "#{$ERROR1} #{$ERROR2} #{$ERROR3}" # Accessible anywhere!
 ```
 
 #Assignment#
-?.rb
+basic_game.rb
+
+If you play any sort of multiplayer games, you'll understand that there's usually a process for adding additional players. For arcade games, you'd insert your tokens and press Start. For online games, you have to enter a matchmaking portal to find your opponents.
+
+In this assignment, you will need to define two classes: **Player** and **Game**. A Player can have many different attributes, but at a minimum, define a **name**. The Game class should have two fields: **name** and **players**. The players attribute should be an array which will store Player instances. The Game class should also have a method, **add_player**, which will you will need to complete. Remember, defensive programming is a virtue! Arguments passed to a method should be validated and checked for correctness before updating an instance. To that end, incorporate a class variable, **MAX_PLAYER_COUNT**, that is used in your method.
 
 ```ruby
-# Your code goes here
+class Player
+    # Your code goes here
+end
 
+class Game
+    # Your code goes here
+end
+
+game = Game.new("RPS")
+
+players = [
+    Player.new("John"), 
+    Player.new("Lizzy"), 
+    Player.new("Clair"), 
+    Player.new("Brad"), 
+    15
+]
+
+players.each { |player| game.add_player(player) }
 ```
