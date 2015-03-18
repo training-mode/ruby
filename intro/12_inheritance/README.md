@@ -58,6 +58,20 @@ end
 
 In a child class, you are allowed to add new attributes and methods, as shown in the updated Katana class. More interestingly, you can **override** methods so that a child class can do something different while preserving the rest of its characteristics. In real world applications, this can be a tremendous timesaver.
 
+##Super##
+
+When you override a method, you don't have to toss out everything. By using the keyword ```super```, you can still call the super class (a.k.a. parent class) method in addition to any new functionality.
+
+```ruby
+def slash
+    # Overrides parent class
+    super                       # Graaah!
+    puts "Vanish!"
+end
+```
+
+Note that you don't *have* to put ```super``` at the beginning of the method. As a matter of fact, the ordering of your call to the super class method could influence the behavior of your child class in a material way.
+
 #Assignment#
 ?.rb
 
