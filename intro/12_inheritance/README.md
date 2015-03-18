@@ -72,9 +72,47 @@ end
 
 Note that you don't *have* to put ```super``` at the beginning of the method. As a matter of fact, the ordering of your call to the super class method could influence the behavior of your child class in a material way.
 
-#Assignment#
-?.rb
+##Multiple Inheritance##
+
+You might have wondered, "Can you inherit from more than one class?" The answer in Ruby is **no**. Although **multiple inheritance** is possible in older languages like C++, many newer languages have chosen to forbid it. As class hierarchies get increasingly complex, multiple inheritance can introduce problems into class structure that are difficult to fix. I highly recommend you look into these issues yourself and come to your own conclusions.
 
 ```ruby
-# Your code goes here
+class MotorVehicle
+end
+
+class Bicycle
+end
+
+# Inherit from first parent class
+class Motorcycle < MotorVehicle
+end
+
+# Attempt to inherit from second class
+class Motorcycle < Bicycle
+end     # mismatch for class Motorcycle (TypeError)
+```
+
+As you can see, explicit attempts at multiple inheritance will throw a TypeError.
+
+#Assignment#
+robots.rb
+
+The singularity is upon us. Take the provided class skeletons and be creative! Incorporate the techniques you've learned in this module and describe these robots using your understanding of object-oriented programming.
+
+```ruby
+class Robot
+    # Your code goes here
+end
+
+class Ultron < Robot
+    # Your code goes here
+end
+
+class MegaMan < Robot
+    # Your code goes here
+end
+
+class Glados < Robot
+    # Your code goes here
+end
 ```
