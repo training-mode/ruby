@@ -6,7 +6,7 @@ Repeating yourself can be very frustrating. The same holds true when you're codi
 
 ```ruby
 def greeting(person)
-    puts "Hello, #{person}."
+  puts "Hello, #{person}."
 end
 
 greeting("Clarice")             # Hello, Clarice.
@@ -19,26 +19,26 @@ You might have noticed in the example above that you *can* omit the parentheses 
 
 ```ruby
 def jump                # No arguments
-    puts "You jumped!"
+  puts "You jumped!"
 end
 
 def add(x, y)
-    return x + y        # This function returns the sum of x and y
+  return x + y          # This function returns the sum of x and y
 end
 
 def multiply(x, y)
-    x * y               # Implicit return: returns the product of x and y
+  x * y                 # Implicit return: returns the product of x and y
 end
 
 def roll_dice(sides=6)              # Default parameter
-    return Random.rand(sides) + 1
+  return rand(sides) + 1
 end
 
 jump                                    # You jumped!
 puts(add(multiply(2,3), multiply(3,4))  # puts(add(6, 12))
                                         # puts(18)
-roll_dice                               # Random.rand(6) + 1
-roll_dice(12)                           # Random.rand(12) + 1
+roll_dice                               # rand(6) + 1
+roll_dice(12)                           # rand(12) + 1
 ```
 
 As you can see above, functions can either **return** a value or not. In ```jump```, the function merely prints some text by itself. On the other hand, ```add``` and ```multiply``` return a value when the function is executed. In the case of ```add```, the function explicitly uses the keyword ```return```. This need not be the case, as you can see in ```multiply```. This is an example of what makes Ruby different from many other languages. **Implicit return** automatically returns whatever the evaluation of the final line in a function is.
@@ -59,25 +59,25 @@ Sometimes it makes sense for a function to have more than one return statement. 
 
 ```ruby
 def validate_user(username)
-    if username == "admin"
-        return true
-    elsif username == "BillLumbergh"
-        return true
-    end
+  if username == "admin"
+    return true
+  elsif username == "BillLumbergh"
+    return true
+  end
 
-    return false
+  return false
 end
 
 # FYI, you can rewrite the function like this
 def validate_user1(username)
-    return username == "admin" || username == "BillLumbergh"
+  return username == "admin" || username == "BillLumbergh"
 end
 
 # Potentially even better
 def validate_user2(username)
-    authorized_users = ["admin", "BillLumbergh"]
+  authorized_users = ["admin", "BillLumbergh"]
 
-    return authorized_users.include? username
+  return authorized_users.include? username
 end
 ```
 
@@ -87,13 +87,13 @@ The last thing I'd like to cover regarding functions is **recursion**. Did you k
 
 ```ruby
 def fibonacci(n)
-    return 1 if n == 1 || n == 2
+  return 1 if n == 1 || n == 2
 
-    return fibonacci(n - 1) + fibonacci(n - 2)
+  return fibonacci(n - 1) + fibonacci(n - 2)
 end
 
 for i in 1..10
-    puts fibonacci(i)
+  puts fibonacci(i)
 end
 ```
 
@@ -122,7 +122,7 @@ Just about every home has a deck of cards hanging around somewhere. Are they Bic
 
 ```ruby
 def create_deck
-    # Your code goes here
+  # Your code goes here
 end
 
 card_deck = create_deck

@@ -3,7 +3,7 @@
 # Sort cards in ascending order, from 2 to Ace.
 
 def create_deck
-    # Your code goes here
+  # Your code goes here
 end
 
 
