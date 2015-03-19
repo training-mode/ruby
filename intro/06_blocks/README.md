@@ -63,12 +63,12 @@ end
 
 def random_attack
   attacks = {
-      0 => "Jab", 
-      1 => "Strong", 
-      2 => "Fierce", 
-      3 => "Short", 
-      4 => "Forward", 
-      5 => "Roundhouse"
+    0 => "Jab", 
+    1 => "Strong", 
+    2 => "Fierce", 
+    3 => "Short", 
+    4 => "Forward", 
+    5 => "Roundhouse"
   }
 
   yield attacks[rand(attacks.length)] if block_given?
