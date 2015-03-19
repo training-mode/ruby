@@ -16,8 +16,8 @@ That's manageable, isn't it? Okay, but what if I asked you to do the same thing 
 count = 0
 
 while count < 1000
-    puts "Hi, mom!"
-    count += 1          # Important!
+  puts "Hi, mom!"
+  count += 1          # Important!
 end
 ```
 
@@ -27,7 +27,7 @@ Let's break it down. The block of code contained in the ```while``` section is r
 count = 0
 
 while count < 1000      # Count will never equal 1000
-    puts "Hi, mom!"     # "Hi, mom!" x infinity
+  puts "Hi, mom!"     # "Hi, mom!" x infinity
 end
 ```
 
@@ -39,8 +39,8 @@ Similar to ```unless``` and ```if```, ```until``` mirrors the behavior of ```whi
 count = 10
 
 until count < 1
-    puts "T-minus #{count}..."
-    count -= 1
+  puts "T-minus #{count}..."
+  count -= 1
 end
 
 puts "Blast off!"
@@ -52,13 +52,13 @@ puts "Blast off!"
 
 ```ruby
 for i in 1..1000
-    puts "Hi, mom!"
+  puts "Hi, mom!"
 end
 ```
 
 ```ruby
 for count in 10.downto(1)
-    puts "T-minus #{count}..."
+  puts "T-minus #{count}..."
 end
 
 puts "Blast off!" 
@@ -68,7 +68,7 @@ Seems pretty succinct, doesn't it? Well, Ruby offers you this additional style:
 
 ```ruby
 (1..3).each do |i|
-    puts "Round #{i} - FIGHT!" 
+  puts "Round #{i} - FIGHT!" 
 end
 ```
 
@@ -76,7 +76,7 @@ The important thing to note about these for-loops is that they are storing the i
 
 ```ruby
 1000.times do
-    puts "Am I under arrest?"
+  puts "Am I under arrest?"
 end
 ```
 
@@ -88,12 +88,12 @@ The last kind I'd like to mention is invoked using the ```loop``` keyword. Go fi
 coin_flips = 0
 
 loop do
-    coin_flips += 1
-    puts "Coin flipped #{coin_flips} times."
+  coin_flips += 1
+  puts "Coin flipped #{coin_flips} times."
 
-    if coin_flips == 100
-        break
-    end
+  if coin_flips == 100
+      break
+  end
 end
 
 puts "Game Over"
@@ -105,13 +105,13 @@ Anything that you put in a ```loop``` block will happen infinitely unless you us
 
 ```ruby
 while true
-    while true
-        puts "Inner block"
-        break
-    end
-
-    puts "Outer block"
+  while true
+    puts "Inner block"
     break
+  end
+
+  puts "Outer block"
+  break
 end
 ```
 
@@ -130,9 +130,9 @@ The next closest relative to ```break``` is the keyword **next**. Using ```next`
 
 ```ruby
 for i in 0...4      # ... is exclusive rather than inclusive (..)
-    next if i < 2   # Ignore the rest of the loop and begin a new iteration
+  next if i < 2     # Ignore the rest of the loop and begin a new iteration
 
-    puts "The value of i is #{i}"
+  puts "The value of i is #{i}"
 end
 ```
 
