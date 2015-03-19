@@ -169,7 +169,7 @@ require "date"
 require "open-uri"
 ```
 
-When you ```require``` a file, you are loading the its contents into your application. Ruby is conveniently bundled with a lot of helpful packages like these, making your life as a programmer easier. It's a good practice to keep logical parts of your code in seperate files. Trust me, you don't want to have to wade through excessively long source files if it can be avoided.
+When you ```require``` a file, you are loading its contents into your application. Ruby is conveniently bundled with a lot of helpful packages like these, making your life as a programmer easier. It's a good practice to keep logical parts of your code in seperate files. Trust me, you don't want to have to wade through excessively long source files if it can be avoided.
 
 The ```require``` method attempts to load a Ruby file that exists on your environment **path**. Since ```date``` is automatically in the correct location, it should work right out of the box. However, if you have files in the same directory, for example, you might want to use ```require_relative``` instead:
 
@@ -192,6 +192,10 @@ today = MyDate::today
 ```
 
 As you can see, using ```require_relative``` can be easier when importing files that are close to one another in a project.
+
+##Final Thoughts##
+
+After taking all this in, you might be wondering to yourself, "Modules seem pretty similar to classes. How are they *different*?" Good question. Well, the main difference is that you **cannot** instantiate a module. That feature is still reserved for classes. If you intend to use modules in an object-oriented manner, at the end of the day, you will still need an instance of a class, otherwise you will just have a collection of constants and functions.
 
 #Assignment#
 ?.rb
