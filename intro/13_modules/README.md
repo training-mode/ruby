@@ -142,6 +142,24 @@ Mixins are used to add attributes and methods to classes. In real life, a rocket
 
 Can you imagine a scenario where this might be useful? As a matter of fact, in game development, combining characteristics in this way can be quite common. Think about which game objects should be able to run, jump, fly, or be destructable and think how different those game entities could be.
 
+A lesser common feature of mixins is achieved through the ```extend``` keyword.
+
+```ruby
+module Mixin
+    def info
+        puts "This is a class-level function"
+    end
+end
+
+class Building
+    extend Mixin
+end
+
+Building.info           # This is a class-level function
+```
+
+When combined with a class, ```extend``` will incorporate a mixin module's functions at the class level rather than the instance level.
+
 #Assignment#
 ?.rb
 
