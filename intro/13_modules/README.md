@@ -198,8 +198,9 @@ As you can see, using ```require_relative``` can be easier when importing files 
 After taking all this in, you might be wondering to yourself, "Modules seem pretty similar to classes. How are they *different*?" Good question. Well, the main difference is that you **cannot** instantiate a module. That feature is still reserved for classes. If you intend to use modules in an object-oriented manner, at the end of the day, you will still need an instance of a class, otherwise you will just have a collection of constants and functions.
 
 #Assignment#
-?.rb
+mixins.rb
+fighter.rb
 
-```ruby
-# Your code goes here
-```
+"Be water, my friend."
+
+A legendary entertainer and arguably the greatest martial artist of the 20th century, Bruce Lee is a hero to many. Rather than be constrained by dogma, his *Jeet Kune Do* took elements from a number of fighting styles. In this assignment, I'd like you to add fighting techniques to WingChunMixin, BoxingMixin, and FencingMixin. Using your knowledge from this unit, synthesize these styles into the JeetKuneDoMixin. Finally, combine this mixin with the Fighter class so that Bruce Lee may live in code.
