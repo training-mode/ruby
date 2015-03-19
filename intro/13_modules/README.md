@@ -112,7 +112,7 @@ module FlyableMixin
 
     def land
         # Only land if currently flying
-        if @if_flying
+        if @is_flying
             @is_flying = false
             puts "#{self.class}: Landed"
         end
