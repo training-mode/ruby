@@ -4,7 +4,7 @@ If you have a good understanding of functions, **blocks** should be easy to pick
 
 ```ruby
 [1, 2, 3].each do |i|           # Block start
-    puts i
+  puts i
 end                             # Block end
 
 [4, 5, 6].each { |i| puts "Hi" * i }    # This is also a block
@@ -31,19 +31,19 @@ Likewise, hashes also have methods which accept blocks as arguments.
 
 ```ruby
 imdb_ratings = {
-    "The Shawshank Redemption" => 9.2, 
-    "The Godfather" => 9.2, 
-    "The Godfather: Part II" => 9.0, 
-    "The Dark Knight" => 8.9, 
-    "Pulp Fiction" => 8.9
+  "The Shawshank Redemption" => 9.2, 
+  "The Godfather" => 9.2, 
+  "The Godfather: Part II" => 9.0, 
+  "The Dark Knight" => 8.9, 
+  "Pulp Fiction" => 8.9
 }
 
 imdb_ratings.select { |k, v| v > 9 }
 imdb_ratings.reject { |k, v| v > 9 }
 
 more_ratings = {
-    "12 Angry Men" => 8.9, 
-    "Schindler's List" => 8.9
+  "12 Angry Men" => 8.9, 
+  "Schindler's List" => 8.9
 }
 
 imdb_ratings.merge!(more_ratings)
@@ -53,25 +53,25 @@ Are you wondering how you can write your own functions to work with blocks? The 
 
 ```ruby
 def block_required
-    yield                   # Simplest way to execute a block
+  yield                   # Simplest way to execute a block
 end
 
 def block_optional
-    yield if block_given?   # Only executes block if it's provided
-    puts "Finished."
+  yield if block_given?   # Only executes block if it's provided
+  puts "Finished."
 end
 
 def random_attack
-    attacks = {
-        0 => "Jab", 
-        1 => "Strong", 
-        2 => "Fierce", 
-        3 => "Short", 
-        4 => "Forward", 
-        5 => "Roundhouse"
-    }
+  attacks = {
+      0 => "Jab", 
+      1 => "Strong", 
+      2 => "Fierce", 
+      3 => "Short", 
+      4 => "Forward", 
+      5 => "Roundhouse"
+  }
 
-    yield attacks[rand(attacks.length)] if block_given?
+  yield attacks[rand(attacks.length)] if block_given?
 end
 
 block_required { puts "Yielding block" }    # Yielding block
@@ -95,16 +95,16 @@ The Nintendo 64 was a very popular game console when I was growing up. People of
 # Top 10 Nintendo 64 games from Gamerankings
 
 game_rankings = {
-    "The Legend of Zelda: Ocarina of Time" => 0.9754, 
-    "Super Mario 64" => 0.9641, 
-    "GoldenEye 007" => 0.9470, 
-    "Perfect Dark" => 0.9455, 
-    "The Legend of Zelda: Majora's Mask" => 0.9195, 
-    "1080: TenEighty Snowboarding" => 0.8960, 
-    "Conker's Bad Fur Day" => 0.8928, 
-    "Excitebike 64" => 0.8907, 
-    "Turok 2: Seeds of Evil" => 0.8896, 
-    "Paper Mario" => 0.8881
+  "The Legend of Zelda: Ocarina of Time" => 0.9754, 
+  "Super Mario 64" => 0.9641, 
+  "GoldenEye 007" => 0.9470, 
+  "Perfect Dark" => 0.9455, 
+  "The Legend of Zelda: Majora's Mask" => 0.9195, 
+  "1080: TenEighty Snowboarding" => 0.8960, 
+  "Conker's Bad Fur Day" => 0.8928, 
+  "Excitebike 64" => 0.8907, 
+  "Turok 2: Seeds of Evil" => 0.8896, 
+  "Paper Mario" => 0.8881
 }
 
 # Your code goes here
