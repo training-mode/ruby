@@ -71,21 +71,21 @@ Finally, how can we leverage this knowledge with what we already know about Ruby
 
 ```ruby
 castlevania_games = [
-    {
-        :title          => "Castlevania", 
-        :platforms      => ["NES"], 
-        :release_date   => "September 26, 1986"
-    }, 
-    {
-        :title          => "Super Castlevania IV", 
-        :platforms      => ["SNES"], 
-        :release_date   => "October 31, 1991"
-    }, 
-    {
-        :title          => "Castlevania: Symphony of the Night", 
-        :platforms      => ["Playstation", "Sega Saturn"], 
-        :release_date   => "March 20, 1997"
-    ]
+  {
+    :title          => "Castlevania", 
+    :platforms      => ["NES"], 
+    :release_date   => "September 26, 1986"
+  }, 
+  {
+    :title          => "Super Castlevania IV", 
+    :platforms      => ["SNES"], 
+    :release_date   => "October 31, 1991"
+  }, 
+  {
+    :title          => "Castlevania: Symphony of the Night", 
+    :platforms      => ["Playstation", "Sega Saturn"], 
+    :release_date   => "March 20, 1997"
+  }
 ]
 ```
 
@@ -106,15 +106,15 @@ The methods ```to_sym``` and ```intern``` are helpful if you need to convert a c
 
 ```ruby
 taxonomic_ranks = [
-    "Life", 
-    "Domain", 
-    "Kingdom", 
-    "Phylum", 
-    "Class", 
-    "Order", 
-    "Family", 
-    "Genus", 
-    "Species"
+  "Life", 
+  "Domain", 
+  "Kingdom", 
+  "Phylum", 
+  "Class", 
+  "Order", 
+  "Family", 
+  "Genus", 
+  "Species"
 ]
 
 my_symbols = []
@@ -133,9 +133,9 @@ Without a doubt, we all spend a lot of time on the web. Your task in this module
 require "open-uri"
 
 urls = [
-    "https://www.reddit.com", 
-    "https://www.facebook.com", 
-    "https://www.spotify.com"
+  "https://www.reddit.com", 
+  "https://www.facebook.com", 
+  "https://www.spotify.com"
 ]
 
 # Your code goes here
