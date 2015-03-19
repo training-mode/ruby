@@ -198,8 +198,8 @@ As you can see, using ```require_relative``` can be easier when importing files 
 After taking all this in, you might be wondering to yourself, "Modules seem pretty similar to classes. How are they *different*?" Good question. Well, the main difference is that you **cannot** instantiate a module. That feature is still reserved for classes. If you intend to use modules in an object-oriented manner, at the end of the day, you will still need an instance of a class, otherwise you will just have a collection of constants and functions.
 
 #Assignment#
-mixins.rb
-fighter.rb
+1. mixins.rb
+2. fighter.rb
 
 "Be water, my friend."
 
