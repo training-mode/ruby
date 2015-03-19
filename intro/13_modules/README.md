@@ -142,7 +142,7 @@ Mixins are used to add attributes and methods to classes. In real life, a rocket
 
 Can you imagine a scenario where this might be useful? As a matter of fact, in game development, combining characteristics in this way can be quite common. Think about which game objects should be able to run, jump, fly, or be destructable and think how different those game entities could be.
 
-A lesser common feature of mixins is achieved through the ```extend``` keyword.
+A less common feature of mixins is achieved through the ```extend``` keyword.
 
 ```ruby
 module Mixin
@@ -159,6 +159,39 @@ Building.info           # This is a class-level function
 ```
 
 When combined with a class, ```extend``` will incorporate a mixin module's functions at the class level rather than the instance level.
+
+##Require##
+
+You might recall from earlier content that these kind of statements were included in some of the examples and assignments:
+
+```ruby
+require "date"
+require "open-uri"
+```
+
+When you ```require``` a file, you are loading the its contents into your application. Ruby is conveniently bundled with a lot of helpful packages like these, making your life as a programmer easier. It's a good practice to keep logical parts of your code in seperate files. Trust me, you don't want to have to wade through excessively long source files if it can be avoided.
+
+The ```require``` method attempts to load a Ruby file that exists on your environment **path**. Since ```date``` is automatically in the correct location, it should work right out of the box. However, if you have files in the same directory, for example, you might want to use ```require_relative``` instead:
+
+```ruby
+# file1.rb
+require "date"
+
+module MyDate
+    def MyDate.today
+        Date.today
+    end
+end
+```
+
+```ruby
+# file2.rb
+require_relative "file1"
+
+today = MyDate::today
+```
+
+As you can see, using ```require_relative``` can be easier when importing files that are close to one another in a project.
 
 #Assignment#
 ?.rb
