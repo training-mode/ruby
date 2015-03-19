@@ -18,13 +18,13 @@ First thing's first. You can store objects of all kinds in a container, whether 
 
 ```ruby
 days_of_the_week = [
-    "Sunday",           # 0 
-    "Monday",           # 1
-    "Tuesday",          # 2
-    "Wednesday",        # 3
-    "Thursday",         # 4
-    "Friday",           # 5
-    "Saturday"          # 6
+  "Sunday",           # 0 
+  "Monday",           # 1
+  "Tuesday",          # 2
+  "Wednesday",        # 3
+  "Thursday",         # 4
+  "Friday",           # 5
+  "Saturday"          # 6
 ]
 
 puts days_of_the_week.length    # 7
@@ -93,9 +93,9 @@ family.delete_at(3) # Removes Meg
 student_grades = [[100,97,99], [95,90,97], [0,0,0]]
 mixed_array = ["a", ["b","c"], 4]
 favorites = [
-    ["Chipotle", "Qdoba"], 
-    ["Metal Gear Solid 3", "The Last of Us", "Ico"], 
-    ["Ruby", "Python"]
+  ["Chipotle", "Qdoba"], 
+  ["Metal Gear Solid 3", "The Last of Us", "Ico"], 
+  ["Ruby", "Python"]
 ]
 ```
 
@@ -107,27 +107,27 @@ Speaking of accessing arrays, how can we do that easily?
 years = [2011, 2012, 2013, 2014]
 
 for year in years
-    puts year
+  puts year
 end
 
 multi_array = [
-    [0,1], 
-    ["a", "b", "c"], 
-    [1.11, 2.22], 
-    [true, false, true]
+  [0,1], 
+  ["a", "b", "c"], 
+  [1.11, 2.22], 
+  [true, false, true]
 ]
 
 for i in multi_array
-    for item in i
-        puts item
-    end
+  for item in i
+    puts item
+  end
 end
 
 # Equivalent
 multi_array.each do |i|
-    i.each do |item|
-        puts item
-    end
+  i.each do |item|
+    puts item
+  end
 end
 ```
 
@@ -148,9 +148,9 @@ Another common and convenient way to organize data is to map key-value pairs in 
 
 ```ruby
 book = {
-    "title" => "The Sun Also Rises", 
-    "author" => "Ernest Hemingway", 
-    "page_count" => 251
+  "title" => "The Sun Also Rises", 
+  "author" => "Ernest Hemingway", 
+  "page_count" => 251
 }
 
 puts book["title"]       # The Sun Also Rises
@@ -178,13 +178,13 @@ You can store objects of all kinds in a hash, and like arrays, it need not be on
 
 ```ruby
 course = {
-    "name" => "History 101",                # String
-    "minutes" => 60,                        # Integer
-    "students" => [                         # Array of hashes!
-        {"name" => "Mary", "age" => 20}, 
-        {"name" => "Takeshi", "age" => 21}, 
-        {"name" => "John", "age" => 20}
-    ]
+  "name" => "History 101",                # String
+  "minutes" => 60,                        # Integer
+  "students" => [                         # Array of hashes!
+    {"name" => "Mary", "age" => 20}, 
+    {"name" => "Takeshi", "age" => 21}, 
+    {"name" => "John", "age" => 20}
+  ]
 }
 ```
 
@@ -192,11 +192,11 @@ To iterate over a hash, you can do it two different ways: 1) using a for-loop, o
 
 ```ruby
 for key, value in course
-    puts "#{key} => #{value}"
+  puts "#{key} => #{value}"
 end
 
 course.each do |key, value|
-    puts "#{key} => #{value}"
+  puts "#{key} => #{value}"
 end
 ```
 
