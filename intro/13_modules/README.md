@@ -11,15 +11,11 @@ Imagine you are working on a bigger codebase and you decide to incorporate a hel
 ```ruby
 module Word
     class Document
-        def initialize
-        end
     end
 end
 
 module Pdf
     class Document
-        def initialize
-        end
     end
 end
 
@@ -79,6 +75,72 @@ puts Isaac::calculate_force(20, 2)
 In this way, ```Isaac``` is an **alias** for the nested module.
 
 Hopefully these snippets have highlighted the benefits of namespacing in your programs.
+
+##Mixins##
+
+Although I emphasized that multiple inheritance is disallowed in Ruby, the truth is that you can achieve a similar effect by using classes and modules together. The secret lies in the keyword ```include``` and **mixins**.
+
+```ruby
+module RunnableMixin
+    attr_reader :is_running
+
+    def run
+        unless @is_running
+            @is_running = true
+            puts "#{self.class}: Started running"
+        end
+    end
+
+    def stop
+        if @is_running
+            @is_running = false
+            puts "#{self.class}: Stopped running"
+        end
+    end
+end
+
+module FlyableMixin
+    attr_reader :is_flying
+
+    def fly
+        # Only fly if not already flying
+        unless @is_flying
+            @is_flying = true
+            puts "#{self.class}: Took flight"
+        end
+    end
+
+    def land
+        # Only land if currently flying
+        if @if_flying
+            @is_flying = false
+            puts "#{self.class}: Landed"
+        end
+    end
+end
+
+class Rocket
+    include FlyableMixin
+end
+
+class Bird
+    include FlyableMixin
+    include RunnableMixin
+end
+
+rocket = Rocket.new
+bird = Bird.new
+
+bird.fly                # Bird: Took flight
+puts bird.is_flying     # true
+bird.land               # Bird: Landed
+bird.run                # Bird: Started running
+bird.stop               # Bird: Stopped running
+```
+
+Mixins are used to add attributes and methods to classes. In real life, a rocket and a bird are very dissimilar, but when modeled in software, they very well could be alike in some ways. In the example above, you can make a Rocket and a Bird both "flyable" but only a Bird "runnable." Even though ```is_running``` and ```is_flying``` aren't declared as instance variables in either class, the mixin updates the classes to make them compatible.
+
+Can you imagine a scenario where this might be useful? As a matter of fact, in game development, combining characteristics in this way can be quite common. Think about which game objects should be able to run, jump, fly, or be destructable and think how different those game entities could be.
 
 #Assignment#
 ?.rb
