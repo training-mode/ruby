@@ -2,18 +2,18 @@ require "logger"
 require_relative "mixins"
 
 module Logging
-    # Provided for your convenience
-    def logger
-        Logging.logger
-    end
+  # Provided for your convenience
+  def logger
+    Logging.logger
+  end
 
-    def self.logger
-        @logger ||= Logger.new(STDOUT)
-    end
+  def self.logger
+    @logger ||= Logger.new(STDOUT)
+  end
 end
 
 class Fighter
-    # Your code goes here
+  # Your code goes here
 end
 
 fighter = Fighter.new("Bruce Lee")

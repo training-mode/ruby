@@ -10,13 +10,13 @@ Imagine you are working on a bigger codebase and you decide to incorporate a hel
 
 ```ruby
 module Word
-    class Document
-    end
+  class Document
+  end
 end
 
 module Pdf
-    class Document
-    end
+  class Document
+  end
 end
 
 document1 = Word::Document.new
@@ -27,18 +27,18 @@ The **scope resolution operator**, ```::```, is used to reference something cont
 
 ```ruby
 module Cardinal
-    NORTH = 0
-    SOUTH = 1
-    EAST  = 2
-    WEST  = 3
+  NORTH = 0
+  SOUTH = 1
+  EAST  = 2
+  WEST  = 3
 end
 
 class Compass
-    attr_accessor :direction
+  attr_accessor :direction
 
-    def initialize
-        @direction = Cardinal::NORTH
-    end
+  def initialize
+    @direction = Cardinal::NORTH
+  end
 end
 
 compass = Compass.new
@@ -49,16 +49,16 @@ Likewise functions and even nested modules can be enclosed by a namespace:
 
 ```ruby
 module Physics
-    module Newtonian
-        # Include module name before method name
-        def Newtonian.calculate_force(mass, acceleration)
-            mass * acceleration
-        end
+  module Newtonian
+    # Include module name before method name
+    def Newtonian.calculate_force(mass, acceleration)
+      mass * acceleration
     end
+  end
 
-    module Einsteinian
-        SPEED_OF_LIGHT = 299792458
-    end
+  module Einsteinian
+    SPEED_OF_LIGHT = 299792458
+  end
 end
 
 force = Physics::Newtonian::calculate_force(10, 2)
@@ -82,50 +82,50 @@ Although I emphasized that multiple inheritance is disallowed in Ruby, the truth
 
 ```ruby
 module RunnableMixin
-    attr_reader :is_running
+  attr_reader :is_running
 
-    def run
-        unless @is_running
-            @is_running = true
-            puts "#{self.class}: Started running"
-        end
+  def run
+    unless @is_running
+      @is_running = true
+      puts "#{self.class}: Started running"
     end
+  end
 
-    def stop
-        if @is_running
-            @is_running = false
-            puts "#{self.class}: Stopped running"
-        end
+  def stop
+    if @is_running
+      @is_running = false
+      puts "#{self.class}: Stopped running"
     end
+  end
 end
 
 module FlyableMixin
-    attr_reader :is_flying
+  attr_reader :is_flying
 
-    def fly
-        # Only fly if not already flying
-        unless @is_flying
-            @is_flying = true
-            puts "#{self.class}: Took flight"
-        end
+  def fly
+    # Only fly if not already flying
+    unless @is_flying
+      @is_flying = true
+      puts "#{self.class}: Took flight"
     end
+  end
 
-    def land
-        # Only land if currently flying
-        if @is_flying
-            @is_flying = false
-            puts "#{self.class}: Landed"
-        end
+  def land
+    # Only land if currently flying
+    if @is_flying
+      @is_flying = false
+      puts "#{self.class}: Landed"
     end
+  end
 end
 
 class Rocket
-    include FlyableMixin
+  include FlyableMixin
 end
 
 class Bird
-    include FlyableMixin
-    include RunnableMixin
+  include FlyableMixin
+  include RunnableMixin
 end
 
 rocket = Rocket.new
@@ -146,13 +146,13 @@ A less common feature of mixins is achieved through the ```extend``` keyword.
 
 ```ruby
 module Mixin
-    def info
-        puts "This is a class-level function"
-    end
+  def info
+    puts "This is a class-level function"
+  end
 end
 
 class Building
-    extend Mixin
+  extend Mixin
 end
 
 Building.info           # This is a class-level function
@@ -178,9 +178,9 @@ The ```require``` method attempts to load a Ruby file that exists on your enviro
 require "date"
 
 module MyDate
-    def MyDate.today
-        Date.today
-    end
+  def MyDate.today
+    Date.today
+  end
 end
 ```
 
