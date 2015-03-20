@@ -1,6 +1,6 @@
 #Objects#
 
-By now, you should have a pretty good understanding of classes and why they can be helpful for programmers. What we haven't discussed yet is Ruby's interpretation of this paradigm and what makes it different from a many other languages.
+By now, you should have a pretty good understanding of classes and why they can be helpful for programmers. What we haven't discussed yet is Ruby's interpretation of this paradigm and what makes it different from many other languages.
 
 In Ruby, **everything is an object** (with only a few exceptions).
 
@@ -28,11 +28,11 @@ false.class             # FalseClass
 FalseClass.superclass   # Object
 ```
 
-Calling the ```superclass``` method on a class name will tell you the parent class in the inheritance tree. Attempts to call ```superclass``` on BasicObject will return ```nil```, therefore it is root of all Objects in Ruby.
+Calling the ```superclass``` method on a class name will tell you the parent class in the inheritance tree. Attempts to call ```superclass``` on BasicObject will return ```nil```, therefore it is the root of all Objects in Ruby.
 
 ##Nil##
 
-In many other languages, **null** is a special type which represents the complete absence of data. To programmers with a background in those languages, this might be surprising:
+In many other languages, **null** is a special type which represents the complete absence of data. To programmers with a background in those languages, the Ruby equivalent, **nil**, might be surprising:
 
 ```ruby
 nil.class               # NilClass
@@ -51,6 +51,8 @@ Class.class         # Class
 Class.superclass    # Module (interesting!)
 Module.superclass   # Object
 ```
+
+Calling the method, ```class```, on class names returns... Class. What is the parent of Class? Believe it or not, it is Module. 
 
 ##What are *not* Objects?##
 
