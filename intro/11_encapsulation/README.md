@@ -8,12 +8,12 @@ When you write classes, you should take the concept of **encapsulation** to hear
 
 ```ruby
 class Television
-    def initialize(brand, width, resolution, hertz)
-        @brand = brand
-        @width = width
-        @resolution = resolution
-        @hertz = hertz
-    end
+  def initialize(brand, width, resolution, hertz)
+    @brand = brand
+    @width = width
+    @resolution = resolution
+    @hertz = hertz
+  end
 end
 
 tv1 = Television.new("Samsung", 32, 1080, 60)
@@ -24,23 +24,23 @@ As you can see above, a Television object is declared but none of its internals 
 
 ```ruby
 class Television
-    def initialize(brand, width, resolution, hertz)
-        @brand = brand
-        @width = width
-        set_resolution(resolution)  # Validate argument
-        @hertz = hertz
-    end
+  def initialize(brand, width, resolution, hertz)
+    @brand = brand
+    @width = width
+    set_resolution(resolution)  # Validate argument
+    @hertz = hertz
+  end
 
-    public          # Note: methods are public by default
-    def describe
-        puts "#{@brand} #{@width}-inch #{@resolution}p #{@hertz}Hz"
-    end
+  public            # Note: methods are public by default
+  def describe
+    puts "#{@brand} #{@width}-inch #{@resolution}p #{@hertz}Hz"
+  end
 
-    private         # This method can only be called within the class
-    def set_resolution(resolution)
-        raise ArgumentError if not resolution > 0
-        @resolution = resolution
-    end
+  private           # This method can only be called within the class
+  def set_resolution(resolution)
+    raise ArgumentError if not resolution > 0
+    @resolution = resolution
+  end
 end
 
 tv1 = Television.new("Samsung", 32, 1080, 60)
@@ -56,15 +56,15 @@ You've probably come across this in other kinds of applications. If you've ever 
 
 ```ruby
 class Notebook
-    attr_reader :length
-    attr_writer :width
-    attr_accessor :title
+  attr_reader :length
+  attr_writer :width
+  attr_accessor :title
 
-    def initialize(length, width, title)
-        @length = length
-        @width = width
-        @title = title
-    end
+  def initialize(length, width, title)
+    @length = length
+    @width = width
+    @title = title
+  end
 end
 
 notebook = Notebook.new(11.0, 9.8, "Chinese 101")
@@ -84,21 +84,21 @@ For your own reference, Ruby automagically translates the ```attr_****``` busine
 ```ruby
 # attr_reader :length
 def length
-    @length
+  @length
 end
 
 # attr_writer :width
 def width=(value)
-    @width = value
+  @width = value
 end
 
 # attr_accessor :title
 def title
-    @title
+  @title
 end
 
 def title=(value)
-    @title = value
+  @title = value
 end
 ```
 
@@ -111,39 +111,39 @@ If you're like most people, you probably watch a lot of Netflix every week. In t
 
 ```ruby
 class Movie
-    attr_reader :title
+  attr_reader :title
 
-    def initialize(title)
-        @title = title
-    end
+  def initialize(title)
+    @title = title
+  end
 end
 
 class NetflixAccount
+  # Your code goes here
+
+  def initialize(username)
+    @username = username
+    @my_list = []
+    @recently_watched = []
+  end
+
+  def add_to_my_list(movie)
     # Your code goes here
+  end
 
-    def initialize(username)
-        @username = username
-        @my_list = []
-        @recently_watched = []
-    end
+  def remove_from_my_list(movie)
+    # Your code goes here
+  end
 
-    def add_to_my_list(movie)
-        # Your code goes here
-    end
-
-    def remove_from_my_list(movie)
-        # Your code goes here
-    end
-
-    def watch(movie)
-        # Your code goes here
-    end
+  def watch(movie)
+    # Your code goes here
+  end
 end
 
 movies = [
-    Movie.new("Seven Samurai"), 
-    Movie.new("Wall Street"), 
-    Movie.new("Big Hero 6")
+  Movie.new("Seven Samurai"), 
+  Movie.new("Wall Street"), 
+  Movie.new("Big Hero 6")
 ]
 
 account = NetflixAccount.new("user123")
