@@ -8,9 +8,9 @@ In programming, inheritance is a process that allows one class to take on the at
 
 ```ruby
 class Sword
-    def slash
-        puts "Graaah!"
-    end
+  def slash
+    puts "Graaah!"
+  end
 end
 
 class Katana < Sword
@@ -31,28 +31,28 @@ The problem with the previous example is that it doesn't do anything interesting
 
 ```ruby
 class Sword
-    def slash
-        puts "Graaah!"
-    end
+  def slash
+    puts "Graaah!"
+  end
 end
 
 class Katana < Sword
-    # New field
-    attr_reader :forger
+  # New field
+  attr_reader :forger
 
-    def initialize(forger)
-        @forger = forger
-    end
+  def initialize(forger)
+    @forger = forger
+  end
 
-    def slash
-        # Overrides parent class
-        puts "Vanish!"
-    end
+  def slash
+    # Overrides parent class
+    puts "Vanish!"
+  end
 
-    def parry
-        # New method
-        puts "Deflected"
-    end
+  def parry
+    # New method
+    puts "Deflected"
+  end
 end
 ```
 
@@ -64,9 +64,9 @@ When you override a method, you don't have to toss out everything. By using the 
 
 ```ruby
 def slash
-    # Overrides parent class
-    super                       # Graaah!
-    puts "Vanish!"
+  # Overrides parent class
+  super                       # Graaah!
+  puts "Vanish!"
 end
 ```
 
@@ -101,18 +101,18 @@ The singularity is upon us. Take the provided class skeletons and be creative! I
 
 ```ruby
 class Robot
-    # Your code goes here
+  # Your code goes here
 end
 
 class Ultron < Robot
-    # Your code goes here
+  # Your code goes here
 end
 
 class MegaMan < Robot
-    # Your code goes here
+  # Your code goes here
 end
 
 class Glados < Robot
-    # Your code goes here
+  # Your code goes here
 end
 ```
