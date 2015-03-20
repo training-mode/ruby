@@ -45,8 +45,8 @@ Unlike Blocks, functions can accept multiple Procs as arguments:
 
 ```ruby
 def multiple_parameters(proc1, proc2)
-    proc1.call(3)   # 27
-    proc2.call      # Finished
+  proc1.call(3)     # 27
+  proc2.call        # Finished
 end
 
 cubed = Proc.new { |x| x**3 }
@@ -77,15 +77,15 @@ As you can see above, even though the Proc and the Lambda have the same contents
 
 ```ruby
 def early_proc
-    early = Proc.new { return "Called Proc!" }
-    puts early.call                                  # Exits function
-    puts "End of early_proc"
+  early = Proc.new { return "Called Proc!" }
+  puts early.call                               # Exits function
+  puts "End of early_proc"
 end
 
 def full_lambda
-    full = lambda { return "Called Lambda!" }
-    puts full.call
-    puts "End of full_lambda"
+  full = lambda { return "Called Lambda!" }
+  puts full.call
+  puts "End of full_lambda"
 end
 
 early_return    # Nothing printed
@@ -100,7 +100,7 @@ It's possible to write a function which accepts a block, a proc, *and* a lambda.
 
 ```ruby
 def chant(&block)               # Notice the &
-    yield "Go!" if block_given?
+  yield "Go!" if block_given?
 end
 
 # Block
@@ -123,17 +123,17 @@ I see quite a few famous buildings from my window and they reminded me of other 
 ```ruby
 # Height in meters
 towers = [
-    { :name => "Berliner Fernsehturm", :height => 368.0 },
-    { :name => "Canton Tower", :height => 600.0 },
-    { :name => "Eiffel Tower", :height => 324.0 },
-    { :name => "Tokyo Tower", :height => 332.6 },
-    { :name => "Stratosphere Tower", :height => 350.2 }
+  { :name => "Berliner Fernsehturm", :height => 368.0 },
+  { :name => "Canton Tower", :height => 600.0 },
+  { :name => "Eiffel Tower", :height => 324.0 },
+  { :name => "Tokyo Tower", :height => 332.6 },
+  { :name => "Stratosphere Tower", :height => 350.2 }
 ]
 
 factor = 100/2.54   # Converts centimeters to inches
 
 conversion = lambda do |x|
-    # Your code goes here
+  # Your code goes here
 end
 
 # Your code goes here
