@@ -17,7 +17,7 @@ require "open-uri"
 require "json"
 
 def load_reddit
-    json_object = JSON.parse(open("https://www.reddit.com/.json").read)
+  json_object = JSON.parse(open("https://www.reddit.com/.json").read)
 end
 
 json_object     # NameError
@@ -37,9 +37,9 @@ As discussed in the previous module, **instance**-level scope pertains the visib
 
 ```ruby
 class Simulator
-    @@GRAV_ACCEL_CONST = 9.83
+  @@GRAV_ACCEL_CONST = 9.83
     
-    # Other methods
+  # Other methods
 end
 ```
 
@@ -51,9 +51,9 @@ While you might be tempted to include them often in your code, please resist! It
 
 ```ruby
 class ErrorMessage
-    $ERROR1 = "You did something bad!"
-    $ERROR2 = "You did something REALLY bad!"
-    $ERROR3 = "Oh no..!"
+  $ERROR1 = "You did something bad!"
+  $ERROR2 = "You did something REALLY bad!"
+  $ERROR3 = "Oh no..!"
 end
 
 puts "#{$ERROR1} #{$ERROR2} #{$ERROR3}" # Accessible anywhere!
@@ -68,21 +68,21 @@ In this assignment, you will need to define two classes: **Player** and **Game**
 
 ```ruby
 class Player
-    # Your code goes here
+  # Your code goes here
 end
 
 class Game
-    # Your code goes here
+  # Your code goes here
 end
 
 game = Game.new("RPS")
 
 players = [
-    Player.new("John"), 
-    Player.new("Lizzy"), 
-    Player.new("Clair"), 
-    Player.new("Brad"), 
-    15
+  Player.new("John"), 
+  Player.new("Lizzy"), 
+  Player.new("Clair"), 
+  Player.new("Brad"), 
+  15
 ]
 
 players.each { |player| game.add_player(player) }
