@@ -8,9 +8,9 @@ Do you remember how we coded a book as hash? It's in module 4 in case you don't 
 
 ```ruby
 book = {
-    "title" => "The Sun Also Rises", 
-    "author" => "Ernest Hemingway", 
-    "page_count" => 251
+  "title" => "The Sun Also Rises", 
+  "author" => "Ernest Hemingway", 
+  "page_count" => 251
 }
 ```
 
@@ -18,27 +18,27 @@ This piece of code is already quite similar to what an Object is. An Object is a
 
 ```ruby
 class EmptyClass
-    # No fields or methods.
+  # No fields or methods.
 end
 
 class GreetingClass
-    # Has one method, no attributes
-    def say_hello
-        puts "Hello!"
-    end
+  # Has one method, no attributes
+  def say_hello
+    puts "Hello!"
+  end
 end
 
 class Book
-    # Has data members, so include initialize
-    def initialize(title, author, page_count)
-        @title = title
-        @author = author
-        @page_count = page_count
-    end
+  # Has data members, so include initialize
+  def initialize(title, author, page_count)
+    @title = title
+    @author = author
+    @page_count = page_count
+  end
 
-    def describe
-        puts "#{@title} by #{@author} (#{@page_count} pages)"
-    end
+  def describe
+    puts "#{@title} by #{@author} (#{@page_count} pages)"
+  end
 end
 ```
 
@@ -68,26 +68,26 @@ The last thing I'd like to introduce in this module are **class variables**. Whi
 
 ```ruby
 class CoinFlip
-    @@flip_count = 0                    # Class variable
+  @@flip_count = 0                      # Class variable
 
-    def initialize
-        @side = rand(2)
-        @@flip_count += 1
-    end
+  def initialize
+    @side = rand(2)
+    @@flip_count += 1
+  end
 
-    def result                          # Translate attribute to English
-        return "Heads" if @side == 0
-        "Tails"
-    end
+  def result                            # Translate attribute to English
+    return "Heads" if @side == 0
+    "Tails"
+  end
 
-    def self.number_of_flips            # Makes class variable accessible
-        @@flip_count
-    end
+  def self.number_of_flips              # Makes class variable accessible
+    @@flip_count
+  end
 end
 
 flips = []
 for i in 1..10
-    flips << CoinFlip.new
+  flips << CoinFlip.new
 end
 
 puts CoinFlip.number_of_flips           # 10
@@ -108,28 +108,28 @@ In real world applications, classes are used to model both abstract and concrete
 require "date"
 
 class Phone
-    # Your code goes here
+  # Your code goes here
 end
 
 phones = [
-    {
-        :brand              => "Apple",
-        :model              => "iPhone 1st gen",
-        :operating_system   => "iPhone OS 1.0",
-        :release_date       => Date.new(2007, 6, 29)
-    },
-    {
-        :brand              => "Google",
-        :model              => "Nexus One",
-        :operating_system   => "Android 2.1 Eclair",
-        :release_date       => Date.new(2010, 1, 5)
-    },
-    {
-        :brand              => "Samsung",
-        :model              => "Galaxy S",
-        :operating_system   => "Android 2.3.6 Gingerbread",
-        :release_date       => Date.new(2010, 6, 4)
-    }
+  {
+    :brand              => "Apple",
+    :model              => "iPhone 1st gen",
+    :operating_system   => "iPhone OS 1.0",
+    :release_date       => Date.new(2007, 6, 29)
+  },
+  {
+    :brand              => "Google",
+    :model              => "Nexus One",
+    :operating_system   => "Android 2.1 Eclair",
+    :release_date       => Date.new(2010, 1, 5)
+  },
+  {
+    :brand              => "Samsung",
+    :model              => "Galaxy S",
+    :operating_system   => "Android 2.3.6 Gingerbread",
+    :release_date       => Date.new(2010, 6, 4)
+  }
 ]
 
 new_phones = []
