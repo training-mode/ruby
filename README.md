@@ -14,4 +14,18 @@ If you're already an experienced programmer in at least one language, I recommen
 4. **Push** the changes to your forked repo.
 5. Issue a **pull request** so that I can quickly see your solution.
 
+##How to Sync Updates##
+
+Since you're going to be forking this repository, you'll need to synchronize your repo with mine as I continue to add new content.
+
+1. [Configuring a remote for a fork](https://help.github.com/articles/configuring-a-remote-for-a-fork/)
+2. [Syncing a fork](https://help.github.com/articles/syncing-a-fork/)
+
+Read the above two links if you need more information. If not, please do the following commands:
+
+1. git remote add upstream https://github.com/training-mode/ruby.git
+2. git fetch upstream
+3. git checkout master
+4. git merge upstream/master
+
 If you can figure out how to do all those things, you'll have a better grasp on how to use Github and how to work on a group project.
