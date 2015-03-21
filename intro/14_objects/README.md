@@ -2,7 +2,7 @@
 
 By now, you should have a pretty good understanding of classes and why they can be helpful for programmers. What we haven't discussed yet is Ruby's interpretation of this paradigm and what makes it different from many other languages.
 
-In Ruby, **everything is an object** (with only a few exceptions).
+In Ruby, **everything is an Object** (with only a few exceptions).
 
 ##Primitives##
 
@@ -73,8 +73,10 @@ Proc.superclass         # Object
 Remember, Procs and Lambdas are in fact Objects. The fact that Blocks are not makes them unique.
 
 #Assignment#
-?.rb
+1. rpg.rb
+2. heroes.rb
+3. enemies.rb
 
-```ruby
-# Your code goes here
-```
+Role-playing games have a long history. My first experiences with RPGs were on the Super Nintendo in 1991, a number of years removed from its tabletop roots.
+
+Your goal in this assignment is to implement the classic turn-based battle system found in many Japanese RPGs. The Character and Party classes are provided for your own convenience. The helper method, ```convert_to_character```, also needs your attention. If you want to add additional fields or methods to the Battle class to assist in the ```run``` logic, you're welcome to do so.
