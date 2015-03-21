@@ -20,7 +20,7 @@ module RPG
       if @hit_points - damage > 0
         @hit_points -= damage
       else
-        @hit_pointers = 0
+        @hit_points = 0
       end
     end
 
