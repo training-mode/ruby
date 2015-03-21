@@ -70,7 +70,7 @@ some_lambda.class       # Proc
 Proc.superclass         # Object
 ```
 
-Remember, Procs and Lambdas are in fact Objects. The fact that Blocks are not makes them unique.
+Remember, Procs and Lambdas are in fact Objects.
 
 #Assignment#
 1. rpg.rb
