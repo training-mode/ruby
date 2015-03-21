@@ -77,6 +77,6 @@ Remember, Procs and Lambdas are in fact Objects. The fact that Blocks are not ma
 2. heroes.csv
 3. enemies.csv
 
-Role-playing games have a long history. My first experiences with RPGs were on the Super Nintendo in 1991, a number of years removed from its tabletop roots.
+Role-playing games have a long history. My first experiences with RPGs were on the Super Nintendo in 1991, a number of years removed from their tabletop roots.
 
 Your goal in this assignment is to implement the classic turn-based battle system found in many Japanese RPGs. The Character and Party classes are provided for your own convenience. The helper method, ```convert_to_character```, also needs your attention. If you want to add additional fields or methods to the Battle class to assist in the ```run``` logic, you're welcome to do so.
