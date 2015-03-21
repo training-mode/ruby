@@ -23,7 +23,7 @@ Since you're going to be forking this repository, you'll need to synchronize you
 
 Read the above two links if you need more information. If not, please do the following commands:
 
-```git
+```
 git remote add upstream https://github.com/training-mode/ruby.git
 git fetch upstream
 git checkout master
