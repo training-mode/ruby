@@ -129,7 +129,7 @@ From this, we can see that the break statement will only escape from whatever th
 The next closest relative to ```break``` is the keyword **next**. Using ```next``` in a loop will immediately skip to the subsequent iteration of the loop, ignoring the rest of the statements in the block.
 
 ```ruby
-for i in 0...4      # ... is exclusive rather than inclusive (..)
+(0...4).each do |i| # ... is exclusive rather than inclusive (..)
   next if i < 2     # Ignore the rest of the loop and begin a new iteration
 
   puts "The value of i is #{i}"
