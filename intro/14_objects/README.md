@@ -58,7 +58,7 @@ Calling the method, ```class```, on class names returns... Class. What is the pa
 
 It's pretty difficult to distill in a single sentence, but I'll try.
 
-"Can you put it on the right-hand side of an assignment operator (```=```) by itself?" If the answer is no, it's not an Object. That means things like operators, looping constructs, methods, and *Blocks* are all exceptions.
+"Can you put it on the right-hand side of an assignment operator (```=```) by itself?" If the answer is no, it's not an Object. That means things like operators, looping constructs, methods, and *Blocks* are all exceptions to the rule.
 
 The last one may or may not surprise you.
 
