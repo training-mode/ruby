@@ -23,9 +23,11 @@ Since you're going to be forking this repository, you'll need to synchronize you
 
 Read the above two links if you need more information. If not, please do the following commands:
 
-1. git remote add upstream https://github.com/training-mode/ruby.git
-2. git fetch upstream
-3. git checkout master
-4. git merge upstream/master
+```git
+git remote add upstream https://github.com/training-mode/ruby.git
+git fetch upstream
+git checkout master
+git merge upstream/master
+```
 
 If you can figure out how to do all those things, you'll have a better grasp on how to use Github and how to work on a group project.
