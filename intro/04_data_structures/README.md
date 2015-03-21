@@ -2,7 +2,7 @@
 
 A common need when writing programs is to organize data efficiently. This becomes increasingly apparent as your code grows bigger and more sophisticated. Rather than telling you all about it, I'll try to show you.
 
-**Containers** are a staple of clean, efficient, and well organized programming. They allow us to store many data items together in a logical way for later use. The most fundamental and basic container you'll learn is an **array**.
+**Containers** are a staple of clean, efficient, and well organized programming. They allow us to store many data items together in a logical way for later use. The most fundamental and basic container you'll learn is an **Array**.
 
 ##Arrays##
 
@@ -14,7 +14,7 @@ puts meals_of_the_day[1]    # Lunch
 puts meals_of_the_day[2]    # Dinner
 ```
 
-First thing's first. You can store objects of all kinds in a container, whether they are Integers, Floats, or Strings. To access an individual item in an array, you use the syntax ```array_name[n]``` where n represents the **index** into the array. The first item in an array always corresponds to 0 rather than 1 as you might assume.
+First thing's first. You can store objects of all kinds in a container, whether they are Integers, Floats, or Strings. To access an individual item in an Array, you use the syntax ```array_name[n]``` where n represents the **index** into the Array. The first item in an Array always corresponds to 0 rather than 1 as you might assume.
 
 ```ruby
 days_of_the_week = [
@@ -32,9 +32,9 @@ puts days_of_the_week.count     # 7
 puts days_of_the_week.size      # 7
 ```
 
-As you can see, the index corresponding to the last item in an array is always the length of the array minus 1. This is due to the 0-indexing of array elements. If you want to know how many items are currently in an array, you can call the methods ```length```, ```count```, and ```size``` (Note: we'll delve more into methods later).
+As you can see, the index corresponding to the last item in an Array is always the length of the Array minus 1. This is due to the 0-indexing of Array elements. If you want to know how many items are currently in an Array, you can call the methods ```length```, ```count```, and ```size``` (Note: we'll delve more into methods later).
 
-Sometimes it's easier to access array elements in reverse order. You can see that in the following code:
+Sometimes it's easier to access Array elements in reverse order. You can see that in the following code:
 
 ```ruby
 array1 = [0, 1, 2, 3]
@@ -54,13 +54,13 @@ puts question[0]    # T
 puts question[-1]   # .
 ```
 
-The arrays above are **homogenous** because all of the elements in the container are the same type. Similarly, you can create a **heterogenous** or "mixed" array just as easily.
+The Arrays above are **homogenous** because all of the elements in the container are the same type. Similarly, you can create a **heterogenous** or "mixed" Array just as easily.
 
 ```ruby
 mixed_array = [123, "up-down-left-right", 99.99]
 ```
 
-Ruby, being the flexible language that it is, allows you to create an array using this syntax too:
+Ruby, being the flexible language that it is, allows you to create an Array using this syntax too:
 
 ```ruby
 array1 = Array.new          # []                Empty array
@@ -68,17 +68,17 @@ array2 = Array.new(3)       # [nil, nil, nil]   No default value specified
 array3 = Array.new(3, 0)    # [0, 0, 0]         Default value is 0
 ```
 
-You'll often want to add new items to an array after you've already declared it. Ruby allows you to do that in the following ways:
+You'll often want to add new items to an Array after you've already declared it. Ruby allows you to do that in the following ways:
 
 ```ruby
 dicaprio_films = ["Catch Me If You Can", "The Aviator", "The Departed"]
 
-dicaprio_films.push("Blood Diamond")        # Add to the end of array
-dicaprio_films << "Revolutionary Road"      # Add to the end of array
+dicaprio_films.push("Blood Diamond")        # Add to the end of Array
+dicaprio_films << "Revolutionary Road"      # Add to the end of Array
 dicaprio_films.insert(4, "Body of Lies")    # Add at index 4
 ```
 
-You can also delete elements from an array:
+You can also delete elements from an Array:
 
 ```ruby
 family = ["Peter", "Lois", "Chris", "Meg", "Stewie", "Brian"]
@@ -87,7 +87,7 @@ family.pop          # Removes last item (Brian)
 family.delete_at(3) # Removes Meg
 ```
 
-**Multidimensional arrays** are the last kind of array you should know at this time. An "array-of-arrays" is the most basic container which stores other containers. You'll find this in all sorts of programs.
+**Multidimensional arrays** are the last kind of Array you should know at this time. An "array-of-arrays" is the most basic container which stores other containers. You'll find this in all sorts of programs.
 
 ```ruby
 student_grades = [[100,97,99], [95,90,97], [0,0,0]]
@@ -99,9 +99,9 @@ favorites = [
 ]
 ```
 
-You should note that the elements in a multidimensional array don't necessarily all need to be the same size! Unless you know the dimensions of an array before you access it, don't assume anything!
+You should note that the elements in a multidimensional array don't necessarily all need to be the same size! Unless you know the dimensions of an Array before you access it, don't assume anything!
 
-Speaking of accessing arrays, how can we do that easily?
+Speaking of accessing Arrays, how can we do that easily?
 
 ```ruby
 years = [2011, 2012, 2013, 2014]
@@ -131,20 +131,20 @@ multi_array.each do |i|
 end
 ```
 
-As you can see, iterating over arrays is a piece of cake when using for-loops. As long as you're going over each item sequentially, this kind approach makes the most sense.
+As you can see, iterating over Arrays is a piece of cake when using for-loops. As long as you're going over each item sequentially, this kind approach makes the most sense.
 
-It's a common need to only take subsets of an an array. For example, if you only want the third, fourth, and fifth items from an array, you can do that like this:
+It's a common need to only take subsets of an an Array. For example, if you only want the third, fourth, and fifth items from an Array, you can do that like this:
 
 ```ruby
 courses = ["Geometry", "Biology", "World History", "P.E.", "Jazz Band"]
 courses[2..4]       # ["World History", "P.E", "Jazz Band"]
 ```
 
-Whether you're building a list of "Top 3 Favorites" or "5 Most Hated," subscripting an array in this was is very helpful.
+Whether you're building a list of "Top 3 Favorites" or "5 Most Hated," subscripting an Array in this was is very helpful.
 
 ##Hashes##
 
-Another common and convenient way to organize data is to map key-value pairs in a container. That is the core idea behind a **hash** (also known as hashmap or dictionary).
+Another common and convenient way to organize data is to map key-value pairs in a container. That is the core idea behind a **Hash** (also known as hashmap or dictionary).
 
 ```ruby
 book = {
@@ -158,13 +158,13 @@ puts book["author"]     # Ernest Hemingway
 puts book["page_count"] # 251
 ```
 
-The syntax for accessing a value stored in a hash is given by ```hash_name["key"]```. For every key in a hash, there is a corresponding value. If a value doesn't already exist for a given key, a hash will return ```nil```.
+The syntax for accessing a value stored in a Hash is given by ```hash_name["key"]```. For every key in a Hash, there is a corresponding value. If a value doesn't already exist for a given key, a Hash will return ```nil```.
 
 ```ruby
 puts book["publish_date"]   # nil
 ```
 
-Similar to arrays, hashes can be created with an alternate syntax:
+Similar to Arrays, Hashes can be created with an alternate syntax:
 
 ```ruby
 high_scores = Hash.new              # No default value specified
@@ -174,13 +174,13 @@ answers = Hash.new(false)           # Default value is false
 puts answers["question_1"]          # false
 ```
 
-You can store objects of all kinds in a hash, and like arrays, it need not be one level deep:
+You can store objects of all kinds in a Hash, and like Arrays, it need not be one level deep:
 
 ```ruby
 course = {
   "name" => "History 101",                # String
   "minutes" => 60,                        # Integer
-  "students" => [                         # Array of hashes!
+  "students" => [                         # Array of Hashes!
     {"name" => "Mary", "age" => 20}, 
     {"name" => "Takeshi", "age" => 21}, 
     {"name" => "John", "age" => 20}
@@ -188,7 +188,7 @@ course = {
 }
 ```
 
-To iterate over a hash, you can do it two different ways: 1) using a for-loop, or 2) using ```each```:
+To iterate over a Hash, you can do it two different ways: 1) using a for-loop, or 2) using ```each```:
 
 ```ruby
 for key, value in course
@@ -201,7 +201,7 @@ end
 ```
 
 #Knowledge Check#
-1. What is the return value of an array element outside the bounds of the array?
+1. What is the return value of an Array element outside the bounds of the Array?
 
 #Assignment#
 queen.rb
