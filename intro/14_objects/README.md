@@ -74,8 +74,8 @@ Remember, Procs and Lambdas are in fact Objects. The fact that Blocks are not ma
 
 #Assignment#
 1. rpg.rb
-2. heroes.rb
-3. enemies.rb
+2. heroes.csv
+3. enemies.csv
 
 Role-playing games have a long history. My first experiences with RPGs were on the Super Nintendo in 1991, a number of years removed from its tabletop roots.
 
