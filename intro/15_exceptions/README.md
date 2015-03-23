@@ -84,6 +84,36 @@ begin  | try
 rescue | catch
 ensure | finally
 
+##Common Errors##
+
+###User Input###
+
+Whenever you prompt a user for input, they have the freedom to type to just about anything. If you write your code naively like this:
+
+```ruby
+puts "Please enter a number between 0 and 9:"
+number = gets.chomp.to_i
+```
+
+you're opening up your program to a logical error. When ```to_i``` is called on a String that can't be converted into an Integer, it returns 0 by default *which would appear to be correct (i.e. a number between 0 and 9)*. Likewise, the user is free to enter numbers outside of the mandated range, opening up the application to a different error.
+
+A much better solution would be something like:
+
+```ruby
+is_valid = false
+
+until is_valid
+  begin
+    puts "Please enter a number between 0 and 9:"
+    number = Integer(gets.chomp)    # Can raise an ArgumentError
+    raise ArgumentError unless number.between?(0, 9)
+    is_valid = true
+  rescue ArgumentError
+    puts "Invalid input. Please try again:"
+  end
+end
+```
+
 ##Final Thoughts##
 
 You will always have discretion on when and where to address errors in your code. With that said, many programmers would agree that throwing an error "early" and catching it "late" is a best practice. What this is really getting at is the idea that handling errors at the "higher" levels of your code (i.e. those closer to the end user) is better than fixing them far too soon.
