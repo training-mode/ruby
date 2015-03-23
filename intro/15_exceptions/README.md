@@ -30,7 +30,7 @@ There are a couple dozen built-in Exception descedant types in Ruby. If you'd li
 
 ##Exception Handlers##
 
-The structure for handling an Exception is a block of code wrapped in ```begin``, ```rescue```, and ```end```. To illustrate this, let's update the first example from this module:
+The structure for handling an Exception is a block of code wrapped in ```begin```, ```rescue```, and ```end```. To illustrate this, let's update the first example from this module:
 
 ```ruby
 begin
