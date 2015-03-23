@@ -90,11 +90,11 @@ You will always have discretion on when and where to address errors in your code
 
 For the sake of example, imagine you're reading in a file which contains information on real estate properties. It's often the case that the raw data you're working with is incomplete or perhaps even wrong. When you're converting those entries into Property instances, during the validation process you have the choice of raising an ArgumentError or handling the error immediately.
 
-properties.csv (Bad rent input)
+properties.csv (Bad zip and rent input)
 
 street        |city    |state|zip  |rent
---------------|--------|-----|-----|------
-Awesome Street|New York|NY   |10282|2400
+--------------|--------|-----|-----|---------
+Awesome Street|New York|NY   |     |2400
 Tiny Road     |Roanoke |VA   |24011|xfxx00
 101st Ave     |Seattle |WA   |98101|-98000000
 
