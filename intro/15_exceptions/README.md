@@ -86,7 +86,41 @@ ensure | finally
 
 ##Final Thoughts##
 
-You will always have discretion on when and where to address errors in your code. With that said, many programmers would agree that throwing an error "early" and catching it "late" is a best practice. What this is really getting at is the idea that handling errors at the "higher" levels of your code (i.e. those closer to the end user) is better than fixing them far too soon. For the sake of example, imagine you're reading in a file which contains information on real estate properties. It's often the case that the raw data you're working with is incomplete or perhaps even wrong. When you're converting those entries into Property instances, during the validation process you have the choice of raising an ArgumentError or handling the error immediately. If you opt for the latter, you are making a judgment that an error must be corrected whenever a Property instance cannot be created, *regardless* of how your program is creating that kind of Object. In the case of the former, you are placing the responsibility on the higher levels of your application on what is the proper course of action. In that way, it's potentially more flexible and easier to debug when Exceptions are passed up the chain.
+You will always have discretion on when and where to address errors in your code. With that said, many programmers would agree that throwing an error "early" and catching it "late" is a best practice. What this is really getting at is the idea that handling errors at the "higher" levels of your code (i.e. those closer to the end user) is better than fixing them far too soon.
+
+For the sake of example, imagine you're reading in a file which contains information on real estate properties. It's often the case that the raw data you're working with is incomplete or perhaps even wrong. When you're converting those entries into Property instances, during the validation process you have the choice of raising an ArgumentError or handling the error immediately.
+
+properties.csv (Bad rent input)
+street        |city    |state|zip  |rent
+--------------|--------|-----|-----|------
+Awesome Street|New York|NY   |10282|2400
+Tiny Road     |Roanoke |VA   |24011|xfxx00
+
+```ruby
+require "csv"
+
+class Property
+  def initialize(street, city, state, zip, rent)
+    # Handle errors here?
+    @street = street
+    @city = city
+    @state = state
+    @zip = zip
+    @rent = rent
+  end
+end
+
+def convert_to_property(array)
+  # Or here?
+end
+
+properties_file = CSV.read("properties.csv")
+properties_file.each do |line|
+  convert_to_property line
+end
+```
+
+If you opt for the latter, you are making a judgment that an error must be corrected whenever a Property instance cannot be created, *regardless* of how your program is creating that kind of Object. In the case of the former, you are placing the responsibility on the higher levels of your application on what is the proper course of action. In that way, it's potentially more flexible and easier to debug when Exceptions are passed up the chain.
 
 #Assignment#
 ?.rb
