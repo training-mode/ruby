@@ -96,6 +96,7 @@ street        |city    |state|zip  |rent
 --------------|--------|-----|-----|------
 Awesome Street|New York|NY   |10282|2400
 Tiny Road     |Roanoke |VA   |24011|xfxx00
+101st Ave     |Seattle |WA   |98101|-98000000
 
 ```ruby
 require "csv"
