@@ -114,6 +114,36 @@ until is_valid
 end
 ```
 
+###Opening a File###
+
+Sometimes you're going to need to read from a file. What's wrong with this code?
+
+```ruby
+some_file = File.open("some_file", "r")
+```
+
+There's no guarantee that some_file actually exists at that location! Try one of these instead:
+
+```ruby
+some_file = File.open("some_file", "r") unless File.exists?("some_file")
+```
+
+```ruby
+some_file = File.open("some_file", "r") rescue nil
+```
+
+```ruby
+class FileNotFoundException < StandardError
+end
+
+begin
+  raise FileNotFoundException unless File.exists?("some_file")
+  some_file = File.open("some_file", "r")
+rescue FileNotFoundException
+  puts "File does not exist"
+end
+```
+
 ##Final Thoughts##
 
 You will always have discretion on when and where to address errors in your code. With that said, many programmers would agree that throwing an error "early" and catching it "late" is a best practice. What this is really getting at is the idea that handling errors at the "higher" levels of your code (i.e. those closer to the end user) is better than fixing them far too soon.
