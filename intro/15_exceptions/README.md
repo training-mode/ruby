@@ -212,7 +212,3 @@ If you opt for the latter, you are making a judgment that an error must be corre
 Authentication exists in all kinds of applications. In this assignment, your task is to write robust implementations for the methods ```load_users``` and ```login```. I've added a sample CSV file with two valid entries and one invalid pair. To help you out, I've already included some validation in the User ```new``` method to guide you towards your solution.
 
 *Side note: Never, under ANY circumstances, store login credentials in plain text. This is purely meant to be instructive and NOT a real world solution. Passwords should always be encrypted in some way.*
-
-```ruby
-# Your code goes here
-```
