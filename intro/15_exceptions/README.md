@@ -206,7 +206,12 @@ end
 If you opt for the latter, you are making a judgment that an error must be corrected whenever a Property instance cannot be created, *regardless* of how your program is creating that kind of Object. In the case of the former, you are placing the responsibility on the higher levels of your application on what is the proper course of action. In that way, it's potentially more flexible and easier to debug when Exceptions are passed up the chain.
 
 #Assignment#
-?.rb
+1. auth.rb
+2. users.csv
+
+Authentication exists in all kinds of applications. In this assignment, your task is to write robust implementations for the methods ```load_users``` and ```login```. I've added a sample CSV file with two valid entries and one invalid pair. To help you out, I've already included some validation in the User ```new``` method to guide you towards your solution.
+
+*Side note: Never, under ANY circumstances, store login credentials in plain text. This is purely meant to be instructive and NOT a real world solution. Passwords should always be encrypted in some way.*
 
 ```ruby
 # Your code goes here
