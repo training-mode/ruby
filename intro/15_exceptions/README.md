@@ -156,6 +156,8 @@ number_of_children = 0
 allowance_per_child = budget / number_of_children   # ZeroDivisionError
 ```
 
+A solution:
+
 ```ruby
 budget = 100
 number_of_children = 0
