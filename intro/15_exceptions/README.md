@@ -156,6 +156,17 @@ number_of_children = 0
 allowance_per_child = budget / number_of_children   # ZeroDivisionError
 ```
 
+```ruby
+budget = 100
+number_of_children = 0
+
+begin
+  allowance_per_child = budget / number_of_children
+rescue ZeroDivisionError
+  allowance_per_child = 0
+end
+```
+
 ##Final Thoughts##
 
 You will always have discretion on when and where to address errors in your code. With that said, many programmers would agree that throwing an error "early" and catching it "late" is a best practice. What this is really getting at is the idea that handling errors at the "higher" levels of your code (i.e. those closer to the end user) is better than fixing them far too soon.
