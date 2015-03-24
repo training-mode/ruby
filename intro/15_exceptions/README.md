@@ -136,12 +136,24 @@ some_file = File.open("some_file", "r") rescue nil
 class FileNotFoundException < StandardError
 end
 
+filename = "some_file"
+
 begin
-  raise FileNotFoundException unless File.exists?("some_file")
-  some_file = File.open("some_file", "r")
+  raise FileNotFoundException unless File.exists?(filename)
+  some_file = File.open(filename, "r")
 rescue FileNotFoundException
-  puts "File does not exist"
+  puts "File '#{filename}' does not exist"
 end
+```
+
+###Divide by Zero###
+
+This is so common, it's one of Ruby's built-in Exceptions.
+
+```ruby
+budget = 100
+number_of_children = 0
+allowance_per_child = budget / number_of_children   # ZeroDivisionError
 ```
 
 ##Final Thoughts##
