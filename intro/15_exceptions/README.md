@@ -133,15 +133,11 @@ some_file = File.open("some_file", "r") rescue nil
 ```
 
 ```ruby
-class FileNotFoundException < StandardError
-end
-
 filename = "some_file"
 
 begin
-  raise FileNotFoundException unless File.exists?(filename)
   some_file = File.open(filename, "r")
-rescue FileNotFoundException
+rescue Errno::ENOENT
   puts "File '#{filename}' does not exist"
 end
 ```
