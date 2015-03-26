@@ -1,0 +1,11 @@
+--- !ruby/object:Order
+items:
+- !ruby/object:Item
+  name: Interstellar
+  price: !ruby/object:BigDecimal 18:0.1999E2
+- !ruby/object:Item
+  name: The Imitation Game
+  price: !ruby/object:BigDecimal 18:0.1795E2
+- !ruby/object:Item
+  name: Nightcrawler
+  price: !ruby/object:BigDecimal 18:0.1799E2

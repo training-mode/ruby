@@ -77,7 +77,7 @@ The output saved to meals.yml:
     name: Fries
 ```
 
-As you can see, a YAML document has a well-defined structure for representing data and it's *human-readable*. The magic words for converting a Ruby Object to a YAML equivalent is the method ```to_yaml```. Likewise, the deserialize YAML into Ruby Objects, you can either use ```YAML::load``` for existing YAML data, or you can use ```YAML.load_file``` to translate a full YAML document.
+As you can see, a YAML document has a well-defined structure for representing data and it's *human-readable*. The magic words for converting a Ruby Object to a YAML equivalent is the method ```to_yaml```. Likewise, to deserialize YAML into Ruby Objects, you can either use ```YAML::load``` for existing YAML data, or you can use ```YAML.load_file``` to translate a full YAML document.
 
 ##What About CSV?##
 
@@ -86,4 +86,7 @@ In previous modules, we've used CSV files to store Object attributes that are la
 The main point to recognize about the CSV format is that it works great for representing a matrix of "flat" data structures. A CSV file is like a spreadsheet that only contains numbers and Strings: none of the individual cell items are more complicated Objects with their own sets of attributes. Those kinds of Objects cannot be easily represented in the same way. Conversely, serialization formats like YAML do in fact preserve more complicated data structures. For times when you need that additional complexity, YAML can be a desirable solution.
 
 #Assignment#
-?.rb
+1. order.rb
+2. order.yml
+
+When was the last time you ordered a movie from Amazon? How about the last time you went grocery shopping? In this assignment, you will implement a basic calculator that reads a file, ```order.yml```, and prints a receipt of the items, their total cost, the taxed amount, and the grand total as you would see in a typical bill or invoice. Make note that this assignment uses the BigDecimal module for greater price accuracy.
