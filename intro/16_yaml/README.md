@@ -85,6 +85,10 @@ In previous modules, we've used CSV files to store Object attributes that are la
 
 The main point to recognize about the CSV format is that it works great for representing a matrix of "flat" data structures. A CSV file is like a spreadsheet that only contains numbers and Strings: none of the individual cell items are more complicated Objects with their own sets of attributes. Those kinds of Objects cannot be easily represented in the same way. Conversely, serialization formats like YAML do in fact preserve more complicated data structures. For times when you need that additional complexity, YAML can be a desirable solution.
 
+#Knowledge Check#
+
+1. When you serialize a Ruby Object into YAML, are methods also represented in the output document?
+
 #Assignment#
 1. order.rb
 2. order.yml
