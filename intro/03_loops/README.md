@@ -147,6 +147,10 @@ As you can see, while ```break``` leaves the entire enclosing loop immediately, 
 
 Finally, although Ruby also offers the ```redo``` and ```retry``` keywords when working with loops, you probably won't need to know them right now. If you're curious, please look them up and think of ways to use them.
 
+#Knowledge Check#
+
+1. Are variables declared in a for-loop available after a loop has ended?
+
 #Assignment#
 fibonacci.rb
 
