@@ -205,6 +205,10 @@ end
 
 If you opt for the latter, you are making a judgment that an error must be corrected whenever a Property instance cannot be created, *regardless* of how your program is creating that kind of Object. In the case of the former, you are placing the responsibility on the higher levels of your application on what is the proper course of action. In that way, it's potentially more flexible and easier to debug when Exceptions are passed up the chain.
 
+#Knowledge Check#
+
+1. What is the parent class of NoMethodError?
+
 #Assignment#
 1. auth.rb
 2. users.csv
