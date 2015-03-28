@@ -75,7 +75,11 @@ GRAVITATIONAL_CONST = 9.8
 GRAVITATIONAL_CONST = 28  # This will cause a warning
 ```
 
-*Note: It is convention to declare constants this way. Remember to declare it with all caps and ending with "_CONST"*
+*Note: It is convention to declare constants this way. Remember to declare it with all caps.*
+
+#Knowledge Check#
+
+1. Who is the principal designer of the Ruby language?
 
 #Assignment#
 family.rb
