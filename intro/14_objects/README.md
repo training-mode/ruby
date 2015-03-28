@@ -72,6 +72,10 @@ Proc.superclass         # Object
 
 Remember, Procs and Lambdas are in fact Objects.
 
+#Knowledge Check#
+
+1. What are the advantages of using ```responds_to?``` over ```is_a?```? 
+
 #Assignment#
 1. rpg.rb
 2. heroes.csv
