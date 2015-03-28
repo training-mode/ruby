@@ -99,6 +99,10 @@ What I've shown above is a popular pattern in programming to keep track of how m
 
 Make sure you understand the difference between a class and an instance. In case you're confused, the former is like a blueprint for the Object while the other is a concrete representation of the Object.
 
+##Knowledge Check##
+
+1. What does the method ```respond_to?``` do?
+
 #Assignment#
 phones.rb
 
