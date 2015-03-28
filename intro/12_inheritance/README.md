@@ -94,6 +94,11 @@ end     # mismatch for class Motorcycle (TypeError)
 
 As you can see, explicit attempts at multiple inheritance will throw a TypeError.
 
+#Knowledge Check#
+
+1. What is an abstract class?
+2. What is an interface?
+
 #Assignment#
 robots.rb
 
