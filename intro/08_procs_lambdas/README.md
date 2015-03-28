@@ -115,7 +115,7 @@ triple = lambda { |x| puts "Lambda:\t#{x * 3}" }    # Lambda: Go!Go!Go!
 chant(&triple)
 ```
 
-##Knowledge Check##
+#Knowledge Check#
 
 1. What does the Hash method ```delete_if``` do?
 
