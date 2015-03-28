@@ -124,7 +124,7 @@ taxonomic_ranks.each { |rank| my_symbols << rank.intern }
 
 One final tip: if you ever need to know what all of the Symbols in your Ruby program are, you can check the array, ```Symbol.all_symbols```. You'll find a lot of Symbols that are reused by the many parts of Ruby, but any Symbols you have also declared will be in there!
 
-##Knowledge Check##
+#Knowledge Check#
 
 1. Are Symbols garbage collected?
 
