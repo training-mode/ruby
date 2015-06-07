@@ -92,6 +92,11 @@ def fibonacci(n)
   return fibonacci(n - 1) + fibonacci(n - 2)
 end
 
+# Alternative
+def fibonacci1(n)
+  n <= 2 ? 1 : fibonacci1(n - 1) + fibonacci1(n - 2)
+end
+
 for i in 1..10
   puts fibonacci(i)
 end
