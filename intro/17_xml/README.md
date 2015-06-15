@@ -1,6 +1,16 @@
 #XML#
 
-**Extensible Markup Language** is another extremely common data serialization format that you will encounter in your programming pursuits.
+**Extensible Markup Language** is another extremely common data serialization format that you will encounter in your programming pursuits. XML has been a staple of data transmission in networked applications for many years, and when paired with things like XML Schema and XSLT, its scope and value is further expanded.
+
+```xml
+<product>
+  <name>Guardians of the Galaxy</name>
+  <price>$20.00</price>
+  <category>Movies</category>
+</product>
+```
+
+An object represented using XML is in essence a hierarchy of parent and child tags. A basic attribute value is enclosed with tags like ```<tagName></tagName>```. By design XML is inflexible in its syntax, so while it helps validate datatypes and document structure, it means you will sometimes have to deal with issues related to malformed documents.
 
 ##Local File##
 
