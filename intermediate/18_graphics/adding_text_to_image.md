@@ -28,7 +28,7 @@ img.write('mac_coffee_copyrighted.jpeg')
 ```
 
 Initial image:
-[![Screenshot](https://raw.github.com/sks147/ruby/master/intermediate/18_graphics/mac_coffee.jpef "mac_coffee")]
+![mac_coffee](https://github.com/sks147/ruby/raw/master/intermediate/18_graphics/mac_coffee.jpeg)
 
 Final image:
-[![Screenshot](https://raw.github.com/sks147/ruby/master/intermediate/18_graphics/mac_coffee_copyrighted.jpef "mac_coffee_copyrighted")]
+![mac_coffee](https://github.com/sks147/ruby/raw/master/intermediate/18_graphics/mac_coffee_copyrighted.jpeg)
