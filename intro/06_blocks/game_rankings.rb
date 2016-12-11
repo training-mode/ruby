@@ -14,4 +14,12 @@ game_rankings = {
 }
 
 # Your code goes here
+avg_ranking = 0
 
+game_rankings.each { |k, v| avg_ranking += v }
+
+avg_ranking /= game_rankings.length
+
+game_rankings.each do |k, v|
+    puts k if v > avg_ranking
+end
