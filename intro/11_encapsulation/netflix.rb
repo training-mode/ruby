@@ -17,14 +17,24 @@ class NetflixAccount
 
   def add_to_my_list(movie)
     # Your code goes here
+    if movie.is_a? Movie
+        @my_list.push(movie)
+    end
   end
 
   def remove_from_my_list(movie)
     # Your code goes here
+    if movie.instance_of?(Movie)
+        puts "#{movie.title} removed from the list."
+    end
   end
 
   def watch(movie)
     # Your code goes here
+    if movie.kind_of?(Movie)
+        puts "Now, #{@username} are watching #{movie.title}."
+        @my_list.delete(movie)
+    end
   end
 end
 
