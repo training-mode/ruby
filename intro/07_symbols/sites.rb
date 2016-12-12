@@ -8,4 +8,5 @@ urls = [
 
 # Your code goes here
 url_map = Hash.new
-urls.each { |url| url_map[url.to_sym] = open(url) }
+urls.each { |url| url_map[url.to_sym] = open(url) { |f| f.size } }
+p url_map

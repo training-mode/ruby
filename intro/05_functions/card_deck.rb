@@ -4,6 +4,13 @@
 
 def create_deck
   # Your code goes here
+    cards = []
+    %w(h d c s).each do |suit|
+        %w(2 3 4 5 6 7 8 9 10 J Q K A).each do |num|
+            cards.push("#{num}#{suit}")
+        end
+    end
+    return cards
 end
 
 
