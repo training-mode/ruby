@@ -62,6 +62,26 @@ module RPG
 
     def run
       # Your code goes here
+        until @hero_party.is_defeated or @enemy_party.is_defeated do
+            idx1 = Random.rand(@hero_party.characters.length)
+            idx2 = Random.rand(@enemy_party.characters.length)
+
+            if @hero_party.characters[idx1].is_dead or
+                @enemy_party.characters[idx2].is_dead
+                next
+            end
+
+            if rand > 0.5
+                puts 'heroes attack'
+                amount = @hero_party.characters[idx1].attack
+                @enemy_party.characters[idx2].take_damage(amount)
+            else
+                puts 'enemies attack'
+                amount = @enemy_party.characters[idx2].attack
+                @hero_party.characters[idx1].take_damage(amount)
+            end
+
+        end
     end
   end
 end
@@ -69,6 +89,8 @@ end
 def convert_to_character(array)
     # Helper method
     # Your code goes here
+    name, hit_points, attack_power = array[0], array[1], array[2]
+    return RPG::Character.new(name, hit_points.to_i, attack_power.to_i)
 end
 
 hero_party = RPG::Party.new
