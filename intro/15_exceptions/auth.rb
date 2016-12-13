@@ -25,11 +25,30 @@ class Application
 
   def load_users(filename)
     # Your code goes here
+    begin
+        file = CSV.read(filename)
+        file.each do |arr|
+            @users[arr[0]] = arr[1]
+        end
+    rescue Errno::ENOENT => ex
+        @logger.warn("File '#{filename}' does not exist")
+        raise ex
+    end
   end
 
   def login
     until @is_authenticated
       # Your code goes here
+        begin
+            @users.each do |name, passwd|
+                User.new(name, passwd)
+            end
+        rescue
+            @logger.info('Loggin failed!')
+            return
+        else
+            @is_authenticated = true
+        end
     end
 
     @logger.info("Login successful!")
