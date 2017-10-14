@@ -1,10 +1,10 @@
-#ruby#
+# ruby
 
-##Purpose##
+## Purpose
 
 The purpose of this project is to provide information and educational exercises for anyone that wants to explore the Ruby language. Rather than overwhelm you with text, my goal is to provide lots of code snippets and a minimum working knowledge for a given skill level. If you need to dive deeper into the details of Ruby, there are plenty of books and other resources freely available online.
 
-##How to Use This##
+## How to Use This
 
 If you're already an experienced programmer in at least one language, I recommend that you just scan over the materials in the repository and tinker around in your own development environment. On the other hand, if this is your first rodeo and you want my help, I recommend doing the following:
 
@@ -14,7 +14,7 @@ If you're already an experienced programmer in at least one language, I recommen
 4. **Push** the changes to your forked repo.
 5. Issue a **pull request** so that I can quickly see your solution.
 
-##How to Sync Updates##
+## How to Sync Updates
 
 Since you're going to be forking this repository, you'll need to synchronize your repo with mine as I continue to add new content.
 
