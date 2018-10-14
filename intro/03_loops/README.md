@@ -1,4 +1,4 @@
-#Loops#
+# Loops
 
 If I asked you to write a program that prints ```Hi, mom!``` three times, how would you write it?  Probably something like this:
 
@@ -10,7 +10,7 @@ puts "Hi, mom!"
 
 That's manageable, isn't it? Okay, but what if I asked you to do the same thing except 1000 times? A million times? This is where **loops** come to the rescue.
 
-##While##
+## While
 
 ```ruby
 count = 0
@@ -31,7 +31,7 @@ while count < 1000      # Count will never equal 1000
 end
 ```
 
-##Until##
+## Until
 
 Similar to ```unless``` and ```if```, ```until``` mirrors the behavior of ```while``` except it tests that a certain condition is false rather than true.
 
@@ -46,7 +46,7 @@ end
 puts "Blast off!"
 ```
 
-##For##
+## For
 
 **For-loops** are a common and popular alternative to **while-loops** when you must repeat a sequence of code a certain number of times. We can rewrite the above examples in the following way:
 
@@ -80,7 +80,7 @@ The important thing to note about these for-loops is that they are storing the i
 end
 ```
 
-##Loop##
+## Loop
 
 The last kind I'd like to mention is invoked using the ```loop``` keyword. Go figure.
 
@@ -99,7 +99,7 @@ end
 puts "Game Over"
 ```
 
-##Break##
+## Break
 
 Anything that you put in a ```loop``` block will happen infinitely unless you use the keyword ```break```. Using ```break``` inside of a loop will cause the program to leave that block of code and return to the next highest scope. Let's get a bit more complicated and show what that means.
 
@@ -124,7 +124,7 @@ Outer block
 
 From this, we can see that the break statement will only escape from whatever the immediate loop block of code is and return to the next highest scope.
 
-##Next##
+## Next
 
 The next closest relative to ```break``` is the keyword **next**. Using ```next``` in a loop will immediately skip to the subsequent iteration of the loop, ignoring the rest of the statements in the block.
 
@@ -147,11 +147,11 @@ As you can see, while ```break``` leaves the entire enclosing loop immediately, 
 
 Finally, although Ruby also offers the ```redo``` and ```retry``` keywords when working with loops, you probably won't need to know them right now. If you're curious, please look them up and think of ways to use them.
 
-#Knowledge Check#
+# Knowledge Check
 
 1. Are variables declared in a for-loop available after a loop has ended?
 
-#Assignment#
+# Assignment
 fibonacci.rb
 
 The Fibonacci sequence is a popular programming exercise for new programmers. If you're not familiar with it, the first ten Fibonacci numbers are 1, 1, 2, 3, 5, 8, 13, 21, 34, and 55. You should be able to see a pattern in this sequence. Using conditionals and looping techniques we've covered so far, write some code that will print each of first ten Fibonacci numbers on its own line.
