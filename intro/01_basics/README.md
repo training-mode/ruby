@@ -1,4 +1,4 @@
-#Basics#
+# Basics
 
 Everyone knows ["Hello, World!"](http://en.wikipedia.org/wiki/%22Hello,_world!%22_program), right?
 
@@ -7,7 +7,7 @@ Well, in case you don't remember, the way to do it in Ruby is:
 puts "Hello, world!"
 ```
 
-##Variables##
+## Variables
 You can declare and assign **variables** of different **types**. Whether it's a number, text, or something more complex, there's a particular kind of **syntax** for its creation or modification.
 
 For example, if you want to declare a String (i.e. a sequence of text), you can do it like this:
@@ -67,7 +67,7 @@ game = "#{franchise} #{number}" # Final Fantasy 7
 
 See how flexible it is? You can mix and match variables of different types.
 
-##Constants##
+## Constants
 If you expect a value to never change during the life of a program, that's a **constant** and should be treated specially. In some other languages, it is impossible to change a constant after it's been created. Although the Ruby interpreter can't enforce this in the same way, it can alert you with warnings if something in your program tries to change a constant.
 
 ```ruby
@@ -77,11 +77,11 @@ GRAVITATIONAL_CONST = 28  # This will cause a warning
 
 *Note: It is convention to declare constants this way. Remember to declare it with all caps.*
 
-#Knowledge Check#
+# Knowledge Check
 
 1. Who is the principal designer of the Ruby language?
 
-#Assignment#
+# Assignment
 family.rb
 ```ruby
 # Ages of family members
